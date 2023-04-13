@@ -14,6 +14,7 @@
     "jobDistance": 23,
     "equipped": false,
     "locality": "Nusle",
+    "available":"Červen",
     "features": {
       "required": [],
       "optional": [],
@@ -35,6 +36,7 @@
     "jobDistance": 18,
     "equipped": false,
     "locality": "Libeň",
+    "available": "Červen",
     "features": {
       "required": [],
       "optional": [],

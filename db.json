@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Terasa Nusle",
+    "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/98530-nabidka-pronajem-bytu-sezimova",
+    "visible": true,
+    "source": "Bezrealitky",
+    "size": 100,
+    "layout": "2+kk",
+    "photo": "https://api.bezrealitky.cz/media/cache/record_main/data/images/advert/98k/98530/1681205773-fdlhmosdjt-phpyojxi4.jpg",
+    "prettyScore": 9,
+    "isFavorite": "true",
+    "metroDistance": 11,
+    "jobDistance": 23,
+    "equipped": false,
+    "locality": "Nusle",
+    "features": {
+      "required": [],
+      "optional": [],
+      "extra": []
+    }
+  },
+  {
+    "id": 2,
+    "name": "Terasa + Balkon Libeň",
+    "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/689954-nabidka-pronajem-bytu-drahobejlova-hlavni-mesto-praha",
+    "visible": true,
+    "source": "Bezrealitky",
+    "size": 50,
+    "layout": "2+kk",
+    "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F689k%2F689954%2F1635956792-bbntnbpafe.jpg&w=750&q=75",
+    "prettyScore": 8,
+    "isFavorite": "true",
+    "metroDistance": 3,
+    "jobDistance": 18,
+    "equipped": false,
+    "locality": "Libeň",
+    "features": {
+      "required": [],
+      "optional": [],
+      "extra": []
+    }
+  }
+]

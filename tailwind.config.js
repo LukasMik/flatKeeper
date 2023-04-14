@@ -8,7 +8,8 @@ export default {
     extend: {
       spacing: {
         'wFlatItem': '28rem',
-        'hFlatItem': '33rem',
+        'hFlatItem': '31rem',
+        'hFlatDetail': '40rem',
       },
     },
   },

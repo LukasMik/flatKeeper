@@ -2,13 +2,10 @@ import {IFlat} from "../types.ts";
 import {NavLink} from "react-router-dom";
 import '../styles/flatItem.scss'
 import {
-    AiOutlineHeart,
-    AiOutlineLayout, BsPiggyBank,
-    FaMapMarkerAlt,
-    GiPathDistance,
+    AiOutlineLayout, BsPiggyBank, FiMapPin,
     IoResize,
     MdOutlineEventAvailable, RiLuggageDepositLine,
-    SiMetrodeparis
+    SiMetrodeparis, TbDiamond
 } from "react-icons/all";
 
 
@@ -30,7 +27,7 @@ export const FlatItem = ({flat}: IProps) => {
                     />
                     <div className="description">
                         <div className='flex flex-col gap-4 group-hover:gap-2 justify-around'>
-                            <p className="text-2xl font-bold line-clamp-1 group-hover:line-clamp-4 text-center group-hover:text-3xl group-hover:mb-2">
+                            <p className="text-2xl font-bold line-clamp-1 group-hover:line-clamp-4 text-center group-hover:text-3xl group-hover:mb-2 duration-300">
                                 {flat.name}
                             </p>
                             <ul className="flex justify-between px-12 line-clamp-1 items-center">
@@ -41,11 +38,11 @@ export const FlatItem = ({flat}: IProps) => {
                                     <IoResize/>{flat.size} m&#178;
                                 </li>
                                 <li className='flex justify-center items-center gap-2'>
-                                    <AiOutlineHeart/>{flat.prettyScore} b.
+                                    <TbDiamond/>{flat.prettyScore} / 10
                                 </li>
                             </ul>
                             <ul className='text-center'>
-                                <li className='font-bold transform group-hover:scale-110'>
+                                <li className='font-bold transform group-hover:scale-110 duration-300 group-hover:pt-2'>
                                     {flat.price.toLocaleString()} Kč
                                     <span className='text-sm'>{!flat.includeEnergies && ' + Electricity'}</span>
                                 </li>
@@ -57,10 +54,7 @@ export const FlatItem = ({flat}: IProps) => {
                                     <SiMetrodeparis/><span>Metro distance:</span><span>{flat.metroDistance} min walk</span>
                                 </li>
                                 <li>
-                                    <GiPathDistance/><span>Job distance:</span><span>{flat.jobDistance} min mhd</span>
-                                </li>
-                                <li>
-                                    <FaMapMarkerAlt/><span>District:</span><span>{flat.district}</span>
+                                    <FiMapPin/><span>District:</span><span>{flat.district}</span>
                                 </li>
                                 <li>
                                     <RiLuggageDepositLine/><span>Deposit:</span><span>{flat.deposit.toLocaleString()} Kč</span>
@@ -80,7 +74,7 @@ export const FlatItem = ({flat}: IProps) => {
             </NavLink>
             <a href={flat.link} target='_blank'
                className='text-center underline underline-offset-4 hover:font-bold transition-all text-center mx-auto block w-fit pt-4'>
-                Odkaz na inzerát
+                Link to advert
             </a>
         </div>
     )

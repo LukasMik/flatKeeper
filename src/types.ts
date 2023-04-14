@@ -10,12 +10,15 @@ export interface IFlat {
     prettyScore: number
     isFavorite: boolean
     metroDistance: number
-    jobDistance: number
+    distanceToInfinit: number
+    distanceToSmartlook: number
     equipped: boolean
     district: string
     available: string
-    price: number,
-    deposit: number,
-    commission: number,
+    price: number
+    deposit: number
+    commission: number
     includeEnergies: boolean
+    sentMessage: boolean
+    hasAnswer: boolean
 }

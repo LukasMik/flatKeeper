@@ -9,7 +9,7 @@ export const FlatItem = ({flat}: IProps) => {
 
     return (
         <div className="w-96">
-            <NavLink to={`/country-detail/${flat.id}`}>
+            <NavLink to={`/flat-detail/${flat.id}`}>
                 <div
                     className="relative overflow-hidden m-1 transform hover:scale-105 transition-all rounded-xl hover:rounded-2xl group">
                     <img

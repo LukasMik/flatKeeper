@@ -2,7 +2,7 @@ export interface IFlat {
     id: number
     name: string
     link: string
-    visible: boolean
+    isVisible: boolean
     source: string
     size: number
     layout: string
@@ -12,6 +12,10 @@ export interface IFlat {
     metroDistance: number
     jobDistance: number
     equipped: boolean
-    locality: string
+    district: string
     available: string
+    price: number,
+    deposit: number,
+    commission: number,
+    includeEnergies: boolean
 }

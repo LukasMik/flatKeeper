@@ -1,5 +1,5 @@
 import axios from "axios";
-import {IFlat} from "../constants.ts";
+import {IFlat} from "../types.ts";
 
 export const useFlatAPI = (): Promise<IFlat[]> => {
     return axios.get<IFlat[]>('http://localhost:3000/flats')

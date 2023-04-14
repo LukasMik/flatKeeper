@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "text";
+@import "flatItem";
 
 body {
   @apply bg-slate-100 overflow-x-hidden

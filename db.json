@@ -43,6 +43,28 @@
         "optional": [],
         "extra": []
       }
+    },
+    {
+      "id": 3,
+      "name": "Žižkov terasa",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-zizkov-olgy-havlove/1274881100",
+      "visible": true,
+      "source": "Sreality",
+      "size": 45,
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QL_Jz/eqdC0q.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90,",
+      "prettyScore": 8,
+      "isFavorite": false,
+      "metroDistance": 22,
+      "jobDistance": 30,
+      "equipped": true,
+      "locality": "Žižkov",
+      "available": "Červenec",
+      "features": {
+        "required": [],
+        "optional": [],
+        "extra": []
+      }
     }
   ]
 }

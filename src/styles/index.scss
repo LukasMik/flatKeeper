@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "text";
+
+body {
+  @apply bg-slate-100 overflow-x-hidden
+}

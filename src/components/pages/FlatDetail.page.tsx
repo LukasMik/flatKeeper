@@ -5,12 +5,13 @@ import {useFlatByIdAPI} from "../../hooks/useFlatByIdAPI.tsx";
 import {
     AiFillHeart,
     AiOutlineHeart,
-    AiOutlineLayout,
-    AiOutlinePlus, BiLink, BsMailbox, BsPencilFill, BsSendCheck, FiMapPin,
+    AiOutlineLayout, BiLink, BsMailbox, BsSendCheck, FiMapPin,
     IoResize, MdOutlineEventAvailable, RiPinDistanceLine,
     SiMetrodeparis,
     TbDiamond, TbSofa
 } from "react-icons/all";
+import {EditFlatModal} from "../modals/EditFlatModal.tsx";
+import {EditFeaturesModal} from "../modals/EditFeaturesModal.tsx";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()
@@ -28,7 +29,7 @@ export const FlatDetailPage = () => {
             <div className='h-hFlatDetail relative relative'>
                 <img src={flat.photo} alt="flat-image"
                      className='w-full h-full object-cover rounded-3xl'/>
-                <div className='absolute top-6 right-6'>
+                <div className='absolute top-6 right-6' title='Edit flat'>
                     <button
                         className='flex items-center gap-4 text-gray-100 text-6xl hover:scale-110 transform transition-all mb-6'>
                         {flat.isFavorite ?
@@ -36,19 +37,15 @@ export const FlatDetailPage = () => {
                             <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>
                         }
                     </button>
-                    <button
-                        className="h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">
-                        <BsPencilFill className='text-gray-100 text-2xl' title='Edit flat'/>
-                    </button>
+                    <EditFlatModal/>
                 </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
                     <TbDiamond className='drop-shadow-lg'/>
                     <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
                 </div>
-                <button
-                    className="absolute bottom-6 right-6 h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">
-                    <AiOutlinePlus className='text-gray-100 text-4xl' title='Add features'/>
-                </button>
+                <div className="absolute bottom-6 right-6" title='Edit features'>
+                    <EditFeaturesModal/>
+                </div>
             </div>
             <div className="flex justify-between p-6">
                 <div>
@@ -119,7 +116,7 @@ export const FlatDetailPage = () => {
                     </li>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <BiLink className='text-2xl'/>
-                        <a href={flat.link} className='hover:font-bold transition-all underline underline-offset-4'>
+                        <a href={flat.link} target='_blank' className='hover:font-bold transition-all underline underline-offset-4'>
                             Link to advert
                         </a>
                     </li>

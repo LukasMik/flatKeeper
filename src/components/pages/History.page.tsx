@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {IFlat} from "../../types.ts";
 import {useFlatAPI} from "../../hooks/useFlatsAPI.tsx";
 import {FlatItem} from "../FlatItem.tsx";
+import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 
 export const HistoryPage = () => {
     const [flats, setFlats] = useState<IFlat[]>([])
@@ -17,6 +18,7 @@ export const HistoryPage = () => {
                 {flats.length > 0 && flats.filter(flat => !flat.isVisible)
                     .map(flat => <FlatItem key={flat.id} flat={flat}/>)}
             </div>
+            <EditFlatModal/>
         </>
     )
 }

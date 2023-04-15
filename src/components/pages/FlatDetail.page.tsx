@@ -6,7 +6,7 @@ import {
     AiFillHeart,
     AiOutlineHeart,
     AiOutlineLayout,
-    AiOutlinePlus, BiLink, BsMailbox, BsSendCheck, FiMapPin,
+    AiOutlinePlus, BiLink, BsMailbox, BsPencilFill, BsSendCheck, FiMapPin,
     IoResize, MdOutlineEventAvailable, RiPinDistanceLine,
     SiMetrodeparis,
     TbDiamond, TbSofa
@@ -28,11 +28,18 @@ export const FlatDetailPage = () => {
             <div className='h-hFlatDetail relative relative'>
                 <img src={flat.photo} alt="flat-image"
                      className='w-full h-full object-cover rounded-3xl'/>
-                <button
-                    className='absolute top-6 right-6 flex items-center gap-4 text-gray-100 text-6xl hover:scale-110 transform transition-all'>
-                    {flat.isFavorite ? <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
-                        <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>}
-                </button>
+                <div className='absolute top-6 right-6'>
+                    <button
+                        className='flex items-center gap-4 text-gray-100 text-6xl hover:scale-110 transform transition-all mb-6'>
+                        {flat.isFavorite ?
+                            <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
+                            <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>}
+                    </button>
+                    <button
+                        className="h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">
+                        <BsPencilFill className='text-gray-100 text-2xl' title='Edit flat'/>
+                    </button>
+                </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
                     <TbDiamond className='drop-shadow-lg'/><p
                     className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
@@ -67,37 +74,45 @@ export const FlatDetailPage = () => {
             <ul className='p-6 flex items-center justify-between'>
                 <div>
                     <p className='flex items-center gap-2 text-xl mb-5'>
-                        <SiMetrodeparis className='text-2xl'/><span>Metro distance:</span><span className='font-bold'>{flat.metroDistance} min walk</span>
+                        <SiMetrodeparis className='text-2xl'/><span>Metro distance:</span><span
+                        className='font-bold'>{flat.metroDistance} min walk</span>
                     </p>
                     <p className='flex items-center gap-2 text-xl mb-5'>
                         <RiPinDistanceLine
-                            className='text-2xl'/><span>Infinit:</span><span className='font-bold'>{flat.distanceToInfinit} min MHD</span>
+                            className='text-2xl'/><span>Infinit:</span><span
+                        className='font-bold'>{flat.distanceToInfinit} min MHD</span>
                     </p>
                     <p className='flex items-center gap-2 text-xl mb-5'>
                         <RiPinDistanceLine
-                            className='text-2xl'/><span>Smartlook:</span><span className='font-bold'>{flat.distanceToSmartlook} min MHD</span>
+                            className='text-2xl'/><span>Smartlook:</span><span
+                        className='font-bold'>{flat.distanceToSmartlook} min MHD</span>
                     </p>
                 </div>
                 <div>
                     <p className='flex items-center gap-2 text-xl mb-5'>
-                        <FiMapPin className='text-2xl'/><span>District:</span><span className='font-bold'>{flat.district}</span>
+                        <FiMapPin className='text-2xl'/><span>District:</span><span
+                        className='font-bold'>{flat.district}</span>
                     </p>
                     <p className='flex items-center gap-2 text-xl mb-5'>
-                        <TbSofa className='text-2xl'/><span>Equipped:</span><span className='font-bold'>{flat.equipped ? 'Yes' : 'No'}</span>
+                        <TbSofa className='text-2xl'/><span>Equipped:</span><span
+                        className='font-bold'>{flat.equipped ? 'Yes' : 'No'}</span>
                     </p>
                     <p className='flex items-center gap-2 text-xl mb-5'>
                         <MdOutlineEventAvailable
-                            className='text-2xl'/><span>Available from:</span><span className='font-bold'>{flat.available}</span>
+                            className='text-2xl'/><span>Available from:</span><span
+                        className='font-bold'>{flat.available}</span>
                     </p>
                 </div>
                 <div>
                     <p className='flex items-center gap-2 text-xl mb-5'>
                         <BsSendCheck
-                            className='text-2xl'/><span>Email sent:</span><span className='font-bold'>{flat.sentMessage ? 'Yes' : 'No'}</span>
+                            className='text-2xl'/><span>Email sent:</span><span
+                        className='font-bold'>{flat.sentMessage ? 'Yes' : 'No'}</span>
                     </p>
                     <p className='flex items-center gap-2 text-xl mb-5'>
                         <BsMailbox
-                            className='text-2xl'/><span>Got answer:</span><span className='font-bold'>{flat.hasAnswer ? 'Yes' : 'No'}</span>
+                            className='text-2xl'/><span>Got answer:</span><span
+                        className='font-bold'>{flat.hasAnswer ? 'Yes' : 'No'}</span>
                     </p>
                     <p className='flex items-center gap-2 text-xl mb-5'>
                         <BiLink className='text-2xl'/><a href={flat.link}

@@ -33,7 +33,8 @@ export const FlatDetailPage = () => {
                         className='flex items-center gap-4 text-gray-100 text-6xl hover:scale-110 transform transition-all mb-6'>
                         {flat.isFavorite ?
                             <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
-                            <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>}
+                            <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>
+                        }
                     </button>
                     <button
                         className="h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">
@@ -41,8 +42,8 @@ export const FlatDetailPage = () => {
                     </button>
                 </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
-                    <TbDiamond className='drop-shadow-lg'/><p
-                    className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
+                    <TbDiamond className='drop-shadow-lg'/>
+                    <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
                 </div>
                 <button
                     className="absolute bottom-6 right-6 h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">
@@ -71,56 +72,59 @@ export const FlatDetailPage = () => {
                         className="mr-2 text-xl"> Commission: </span> {flat.commission.toLocaleString()} Kč</p> : null}
                 </div>
             </div>
-            <ul className='p-6 flex items-center justify-between'>
-                <div>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <SiMetrodeparis className='text-2xl'/><span>Metro distance:</span><span
-                        className='font-bold'>{flat.metroDistance} min walk</span>
-                    </p>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <RiPinDistanceLine
-                            className='text-2xl'/><span>Infinit:</span><span
-                        className='font-bold'>{flat.distanceToInfinit} min MHD</span>
-                    </p>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <RiPinDistanceLine
-                            className='text-2xl'/><span>Smartlook:</span><span
-                        className='font-bold'>{flat.distanceToSmartlook} min MHD</span>
-                    </p>
-                </div>
-                <div>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
+            <div className='p-6 flex items-center justify-between'>
+                <ul>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <SiMetrodeparis className='text-2xl'/>
+                        <span>Metro distance:</span>
+                        <span className='font-bold'>{flat.metroDistance} min walk</span>
+                    </li>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <RiPinDistanceLine className='text-2xl'/>
+                        <span>Infinit:</span>
+                        <span className='font-bold'>{flat.distanceToInfinit} min MHD</span>
+                    </li>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <RiPinDistanceLine className='text-2xl'/>
+                        <span>Smartlook:</span>
+                        <span className='font-bold'>{flat.distanceToSmartlook} min MHD</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
                         <FiMapPin className='text-2xl'/><span>District:</span><span
                         className='font-bold'>{flat.district}</span>
-                    </p>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <TbSofa className='text-2xl'/><span>Equipped:</span><span
-                        className='font-bold'>{flat.equipped ? 'Yes' : 'No'}</span>
-                    </p>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <MdOutlineEventAvailable
-                            className='text-2xl'/><span>Available from:</span><span
-                        className='font-bold'>{flat.available}</span>
-                    </p>
-                </div>
-                <div>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <BsSendCheck
-                            className='text-2xl'/><span>Email sent:</span><span
-                        className='font-bold'>{flat.sentMessage ? 'Yes' : 'No'}</span>
-                    </p>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <BsMailbox
-                            className='text-2xl'/><span>Got answer:</span><span
-                        className='font-bold'>{flat.hasAnswer ? 'Yes' : 'No'}</span>
-                    </p>
-                    <p className='flex items-center gap-2 text-xl mb-5'>
-                        <BiLink className='text-2xl'/><a href={flat.link}
-                                                         className='hover:font-bold transition-all underline underline-offset-4'>Link
-                        to advert</a>
-                    </p>
-                </div>
-            </ul>
+                    </li>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <TbSofa className='text-2xl'/>
+                        <span>Equipped:</span>
+                        <span className='font-bold'>{flat.equipped ? 'Yes' : 'No'}</span>
+                    </li>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <MdOutlineEventAvailable className='text-2xl'/>
+                        <span>Available from:</span>
+                        <span className='font-bold'>{flat.available}</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <BsSendCheck className='text-2xl'/>
+                        <span>Email sent:</span>
+                        <span className='font-bold'>{flat.sentMessage ? 'Yes' : 'No'}</span>
+                    </li>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <BsMailbox className='text-2xl'/>
+                        <span>Got answer:</span>
+                        <span className='font-bold'>{flat.hasAnswer ? 'Yes' : 'No'}</span>
+                    </li>
+                    <li className='flex items-center gap-2 text-xl mb-5'>
+                        <BiLink className='text-2xl'/>
+                        <a href={flat.link} className='hover:font-bold transition-all underline underline-offset-4'>
+                            Link to advert
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }

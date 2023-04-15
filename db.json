@@ -2,7 +2,7 @@
   "flats": [
     {
       "id": 1,
-      "name": "Mezonet terasa Nusle",
+      "name": "Maisonette terace Nusle",
       "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/98530-nabidka-pronajem-bytu-sezimova",
       "isVisible": true,
       "source": "Bezrealitky",
@@ -31,7 +31,7 @@
     },
     {
       "id": 2,
-      "name": "Terasa + Balkon Libeň",
+      "name": "Terrace + Balcony Libeň",
       "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/689954-nabidka-pronajem-bytu-drahobejlova-hlavni-mesto-praha",
       "isVisible": true,
       "source": "Bezrealitky",
@@ -60,7 +60,7 @@
     },
     {
       "id": 3,
-      "name": "Žižkov terasa",
+      "name": "Žižkov terrace",
       "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-zizkov-olgy-havlove/1274881100",
       "isVisible": true,
       "source": "Sreality",

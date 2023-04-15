@@ -1,0 +1,7 @@
+.input-styles {
+  @apply block mt-2 w-full px-4 py-2 border rounded-md focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500
+}
+
+label {
+  @apply text-xl
+}

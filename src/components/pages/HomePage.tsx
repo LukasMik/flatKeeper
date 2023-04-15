@@ -25,7 +25,7 @@ export const HomePage = () => {
             </div>
             <div className="fixed bottom-6 right-6">
                 <div title='Add new flat'>
-                    <EditFlatModal/>
+                    <EditFlatModal status='new'/>
                 </div>
             </div>
         </>

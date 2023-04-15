@@ -37,7 +37,7 @@ export const FlatDetailPage = () => {
                             <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>
                         }
                     </button>
-                    <EditFlatModal/>
+                    <EditFlatModal status='edit'/>
                 </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
                     <TbDiamond className='drop-shadow-lg'/>

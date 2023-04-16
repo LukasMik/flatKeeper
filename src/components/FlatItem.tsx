@@ -44,28 +44,29 @@ export const FlatItem = ({flat}: IProps) => {
                             <ul className='text-center'>
                                 <li className='font-bold transform group-hover:scale-110 duration-300 group-hover:pt-2'>
                                     {flat.price.toLocaleString()} Kč
-                                    <span className='text-sm'>{!flat.includeEnergies && ' + Electricity'}</span>
+                                    <span className='text-sm'>{!flat.includeEnergies && ' + Energy'}</span>
                                 </li>
                             </ul>
                         </div>
                         <div className="hidden-content">
                             <ul>
                                 <li>
-                                    <SiMetrodeparis/><span>Metro distance:</span><span>{flat.metroDistance} min walk</span>
+                                    <SiMetrodeparis/><span>Metro distance:</span><span>{flat.metroDistance ? `${flat.metroDistance} min walk` : 'No data'}</span>
                                 </li>
                                 <li>
                                     <FiMapPin/><span>District:</span><span>{flat.district}</span>
                                 </li>
+                                {flat.deposit ?
                                 <li>
                                     <RiLuggageDepositLine/><span>Deposit:</span><span>{flat.deposit.toLocaleString()} Kč</span>
-                                </li>
-                                {flat.commission > 0 ?
+                                </li> : null}
+                                {flat.commission ?
                                     <li>
                                         <BsPiggyBank/><span>Commission:</span><span>{flat.commission.toLocaleString()} Kč</span>
                                     </li> : null
                                 }
                                 <li>
-                                    <MdOutlineEventAvailable/><span>Available from:</span><span>{flat.available}</span>
+                                    <MdOutlineEventAvailable/><span>Available from:</span><span>{flat.availableFrom}</span>
                                 </li>
                             </ul>
                         </div>

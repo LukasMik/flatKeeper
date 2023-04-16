@@ -14,7 +14,7 @@ export interface IFlat {
     distanceToSmartlook: number
     equipped: boolean
     district: string
-    available: string
+    availableFrom: string
     price: number
     deposit: number
     commission: number

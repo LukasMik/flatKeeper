@@ -1,11 +1,16 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import {AiOutlinePlus, BsPencilFill, RxCross2} from "react-icons/all";
-import {EditFlatForm} from "../forms/EeditFlatForm.tsx";
+import {EditFlatForm} from "../forms/EditFlatForm.tsx";
+import {useState} from "react";
 
 interface IProps {
 status: 'new' | 'edit'
 }
 export const EditFlatModal = ({status}: IProps) => {
+    const [formSuccess, setFormSuccess] = useState<boolean>(false)
+
+    const onSuccess = () => setFormSuccess(true)
+
     return (
         <Dialog.Root>
             <Dialog.Trigger asChild>
@@ -22,7 +27,7 @@ export const EditFlatModal = ({status}: IProps) => {
                     </Dialog.Title>
                     <Dialog.Description className="text-mauve11 mt-[10px] mb-5 text-[15px] leading-normal">
                     </Dialog.Description>
-                        <EditFlatForm />
+                    {formSuccess ? <p className="text-3xl text-center py-24">Flat has been successfully added!</p> : <EditFlatForm handleSuccess={onSuccess}/>}
                     <Dialog.Close asChild>
                         <button
                             className="fixed top-4 right-4 border border-2 rounded-full p-2 group bg-black bg-opacity-0 hover:bg-opacity-20 transition-all"

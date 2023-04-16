@@ -1,5 +1,13 @@
 .input-styles {
-  @apply block mt-2 w-full px-4 py-2 border rounded-md focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500
+  @apply block mt-2 w-full px-4 py-2 border rounded-md focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500 hover:bg-gray-50 transition-all cursor-pointer
+}
+
+.checkbox-styles {
+  @apply block mt-5 mb-3 h-5 w-5 cursor-pointer hover:scale-105 transition-all transform
+}
+
+.select-styles {
+  @apply block mt-2 w-full px-4 py-3 border rounded-md focus:outline-none focus:border-gray-500 focus:ring-1 focus:ring-gray-500 bg-transparent hover:bg-gray-100 transition-all cursor-pointer
 }
 
 label {

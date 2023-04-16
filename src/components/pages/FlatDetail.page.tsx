@@ -12,6 +12,7 @@ import {
 } from "react-icons/all";
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 import {EditFeaturesModal} from "../modals/EditFeaturesModal.tsx";
+import {FlatContextProvider} from "../../contexts/flatContext.tsx";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()
@@ -37,7 +38,9 @@ export const FlatDetailPage = () => {
                             <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>
                         }
                     </button>
-                    <EditFlatModal status='edit'/>
+                    <FlatContextProvider flat={flat}>
+                        <EditFlatModal status='edit'/>
+                    </FlatContextProvider>
                 </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
                     <TbDiamond className='drop-shadow-lg'/>
@@ -60,13 +63,18 @@ export const FlatDetailPage = () => {
                     </div>
                 </div>
                 <div className='text-right'>
-                    <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč</p>
-                    <p className="text-2xl">
-                        <span className="mr-2 text-xl"> Deposit: </span>
-                        {flat.deposit.toLocaleString()} Kč
-                    </p>
-                    {flat.commission ? <p className="text-2xl"><span
-                        className="mr-2 text-xl"> Commission: </span> {flat.commission.toLocaleString()} Kč</p> : null}
+                    {flat.includeEnergies ?
+                        <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč</p> :
+                        <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč <span className='text-lg'>+ energy</span></p>
+                    }
+                    {flat.deposit ?
+                        <p className="text-2xl">
+                            <span className="mr-2 text-xl"> Deposit: </span>{flat.deposit.toLocaleString()} Kč
+                        </p> : null}
+                    {flat.commission ?
+                        <p className="text-2xl">
+                            <span className="mr-2 text-xl"> Commission: </span> {flat.commission.toLocaleString()} Kč
+                        </p> : null}
                 </div>
             </div>
             <div className='p-6 flex items-center justify-between'>
@@ -74,17 +82,17 @@ export const FlatDetailPage = () => {
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <SiMetrodeparis className='text-2xl'/>
                         <span>Metro distance:</span>
-                        <span className='font-bold'>{flat.metroDistance} min walk</span>
+                        <span className='font-bold'>{flat.metroDistance ? `${flat.metroDistance} min walk` : 'No data'}</span>
                     </li>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <RiPinDistanceLine className='text-2xl'/>
                         <span>Infinit:</span>
-                        <span className='font-bold'>{flat.distanceToInfinit} min MHD</span>
+                        <span className='font-bold'>{flat.distanceToInfinit ? `${flat.distanceToInfinit} min MHD` : 'No data'}</span>
                     </li>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <RiPinDistanceLine className='text-2xl'/>
                         <span>Smartlook:</span>
-                        <span className='font-bold'>{flat.distanceToSmartlook} min MHD</span>
+                        <span className='font-bold'>{flat.distanceToSmartlook ? `${flat.distanceToSmartlook} min MHD` : 'No data'}</span>
                     </li>
                 </ul>
                 <ul>
@@ -100,7 +108,7 @@ export const FlatDetailPage = () => {
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <MdOutlineEventAvailable className='text-2xl'/>
                         <span>Available from:</span>
-                        <span className='font-bold'>{flat.available}</span>
+                        <span className='font-bold'>{flat.availableFrom}</span>
                     </li>
                 </ul>
                 <ul>
@@ -116,7 +124,8 @@ export const FlatDetailPage = () => {
                     </li>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <BiLink className='text-2xl'/>
-                        <a href={flat.link} target='_blank' className='hover:font-bold transition-all underline underline-offset-4'>
+                        <a href={flat.link} target='_blank'
+                           className='hover:font-bold transition-all underline underline-offset-4'>
                             Link to advert
                         </a>
                     </li>

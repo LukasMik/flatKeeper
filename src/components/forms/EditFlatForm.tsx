@@ -6,6 +6,7 @@ import {useFlatContext} from "../../contexts/flatContext.tsx";
 import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
 import {usePostFlatAPI} from '../../hooks/usePostFlatsAPI.tsx'
+import {usePutFlatAPI} from "../../hooks/usePutFlatsAPI.tsx";
 
 interface IProps {
     handleSuccess: () => void
@@ -15,25 +16,25 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
     const flat: IFlat = useFlatContext()
     const form = useForm<IFlat>({
         defaultValues: {
-            name: flat.name?? null,
-            link: flat.link?? null,
-            size: flat.size?? null,
-            layout: flat.layout?? '2+kk',
-            photo: flat.photo?? null,
-            prettyScore: flat.prettyScore?? null,
-            isFavorite: flat.isFavorite?? false,
-            metroDistance: flat.metroDistance?? null,
-            distanceToInfinit: flat.distanceToInfinit?? null,
-            distanceToSmartlook: flat.distanceToSmartlook?? null,
-            equipped: flat.equipped?? false,
-            district: flat.district?? null,
-            availableFrom: flat.availableFrom?? 'June',
-            price: flat.price?? null,
-            deposit: flat.deposit?? null,
-            commission: flat.commission?? null,
-            includeEnergies: flat.includeEnergies?? false,
-            sentMessage: flat.sentMessage?? false,
-            hasAnswer: flat.hasAnswer?? false,
+            name: flat.name ?? null,
+            link: flat.link ?? null,
+            size: flat.size ?? null,
+            layout: flat.layout ?? '2+kk',
+            photo: flat.photo ?? null,
+            prettyScore: flat.prettyScore ?? null,
+            isFavorite: flat.isFavorite ?? false,
+            metroDistance: flat.metroDistance ?? null,
+            distanceToInfinit: flat.distanceToInfinit ?? null,
+            distanceToSmartlook: flat.distanceToSmartlook ?? null,
+            equipped: flat.equipped ?? false,
+            district: flat.district ?? null,
+            availableFrom: flat.availableFrom ?? 'June',
+            price: flat.price ?? null,
+            deposit: flat.deposit ?? null,
+            commission: flat.commission ?? null,
+            includeEnergies: flat.includeEnergies ?? false,
+            sentMessage: flat.sentMessage ?? false,
+            hasAnswer: flat.hasAnswer ?? false,
         }
     });
     const {register, control, handleSubmit, formState} = form
@@ -43,8 +44,14 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
         handleSuccess()
     }
     const onSubmit = (data: IFlat) => {
-        data.isVisible = true
-        return usePostFlatAPI(data, onSuccess);
+        if (Object.keys(flat).length > 0) {
+            data.id = flat.id
+            data.isVisible = flat.isVisible
+            return usePutFlatAPI(data, onSuccess)
+        } else {
+            data.isVisible = true
+            return usePostFlatAPI(data, onSuccess);
+        }
     }
 
 

@@ -85,7 +85,6 @@
       }
     },
     {
-      "id": 4,
       "name": "Old town, near river",
       "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/777061-nabidka-pronajem-bytu-zatecka-praha",
       "size": "59",
@@ -95,16 +94,17 @@
       "isFavorite": false,
       "metroDistance": "",
       "distanceToInfinit": "",
-      "distanceToSmartlook": "",
+      "distanceToSmartlook": "1",
       "equipped": false,
       "district": "Old town",
       "availableFrom": "Now",
       "price": "22200",
       "deposit": "43000",
       "commission": "",
-      "includeEnergies": false,
+      "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
+      "id": 4,
       "isVisible": true
     },
     {
@@ -152,6 +152,29 @@
       "hasAnswer": false,
       "isVisible": true,
       "id": 8
+    },
+    {
+      "name": "tefusivfesibfeslkbfksebf",
+      "link": "tet",
+      "size": "2",
+      "layout": "2+kk",
+      "photo": "2",
+      "prettyScore": "2",
+      "isFavorite": false,
+      "metroDistance": null,
+      "distanceToInfinit": null,
+      "distanceToSmartlook": null,
+      "equipped": false,
+      "district": "2",
+      "availableFrom": "June",
+      "price": "2",
+      "deposit": "5",
+      "commission": "",
+      "includeEnergies": false,
+      "sentMessage": false,
+      "hasAnswer": false,
+      "id": 9,
+      "isVisible": true
     }
   ]
 }

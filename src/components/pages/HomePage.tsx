@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {IFlat} from "../../types.ts";
 import {useFlatAPI} from "../../hooks/useFlatsAPI.tsx";
 import {FlatItem} from "../FlatItem.tsx";
@@ -6,8 +6,11 @@ import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 
 export const HomePage = () => {
     const [flats, setFlats] = useState<IFlat[]>([])
+    const [reload, setReload] = useState<boolean>(false)
 
-    useFlatAPI().then(flats => setFlats(flats))
+    useEffect(() => {
+        useFlatAPI().then(flats => setFlats(flats))
+    }, [reload])
 
     return (
         <>
@@ -23,7 +26,7 @@ export const HomePage = () => {
             </div>
             <div className="fixed bottom-6 right-6">
                 <div title='Add new flat'>
-                    <EditFlatModal status='new'/>
+                    <EditFlatModal status='new' doReload={() => setReload(!reload)}/>
                 </div>
             </div>
         </>

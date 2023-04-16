@@ -17,10 +17,13 @@ import {FlatContextProvider} from "../../contexts/flatContext.tsx";
 export const FlatDetailPage = () => {
     const {id} = useParams()
     const [flat, setFlat] = useState<IFlat | null>(null)
+    const [reload, setReload] = useState<boolean>(false)
 
     useEffect(() => {
         id ? useFlatByIdAPI(id).then(flat => setFlat(flat)) : null
-    }, [id])
+    }, [id, reload])
+
+    useEffect(() => console.log('reload'), [reload])
 
     if (!flat)
         return null
@@ -39,7 +42,7 @@ export const FlatDetailPage = () => {
                         }
                     </button>
                     <FlatContextProvider flat={flat}>
-                        <EditFlatModal status='edit'/>
+                        <EditFlatModal status='edit' doReload={() => setReload(!reload)}/>
                     </FlatContextProvider>
                 </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>

@@ -2,21 +2,24 @@ import {IFlat} from "../types.ts";
 import {NavLink} from "react-router-dom";
 import '../styles/flatItem.scss'
 import {
-    AiOutlineLayout, BsPiggyBank, FiMapPin,
+    AiFillHeart, AiOutlineHeart,
+    AiOutlineLayout, BsPiggyBank, BsTrash3, BsTrash3Fill, FiMapPin,
     IoResize,
     MdOutlineEventAvailable, RiLuggageDepositLine,
     SiMetrodeparis, TbDiamond
 } from "react-icons/all";
 
-
-interface IProps {
+interface IProp {
     flat: IFlat
+    handleEdit: (status: string, flat: IFlat) => void
 }
 
-export const FlatItem = ({flat}: IProps) => {
+
+
+export const FlatItem = ({flat, handleEdit}: IProp) => {
 
     return (
-        <div className="w-wFlatItem">
+        <div className="w-wFlatItem relative">
             <NavLink to={`/flat-detail/${flat.id}`}>
                 <div
                     className="h-hFlatItem relative overflow-hidden m-1 transform hover:scale-105 transition-all rounded-xl hover:rounded-2xl group">
@@ -73,10 +76,31 @@ export const FlatItem = ({flat}: IProps) => {
                     </div>
                 </div>
             </NavLink>
-            <a href={flat.link} target='_blank'
-               className='text-center underline underline-offset-4 hover:font-bold transition-all text-center mx-auto block w-fit pt-4'>
-                Link to advert
-            </a>
+            <div className="flex items-center justify-between p-4">
+                <a href={flat.link} target='_blank'
+                   className='underline underline-offset-4 hover:font-bold transition-all'>
+                    Link to advert
+                </a>
+                <div className='flex items-center gap-4' title='Edit flat'>
+                    <button
+                        onClick={() => handleEdit('delete', flat)}
+                        className='block text-4xl hover:scale-110 transform transition-all'>
+                        {flat.isVisible ?
+                            <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
+                            <BsTrash3Fill className='drop-shadow-lg text-gray-600' title='Restore'/>
+                        }
+                    </button>
+                    <button
+                        onClick={() => handleEdit('favourite', flat)}
+                        className='block text-4xl hover:scale-110 transform transition-all'>
+                        {flat.isFavorite ?
+                            <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
+                            <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>
+                        }
+                    </button>
+                </div>
+
+            </div>
         </div>
     )
 }

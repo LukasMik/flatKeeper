@@ -1,12 +1,11 @@
 import {useForm} from "react-hook-form";
 import '../../styles/form.scss'
-import {DevTool} from "@hookform/devtools";
 import {IFlat} from "../../types.ts";
 import {useFlatContext} from "../../contexts/flatContext.tsx";
 import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
-import {usePostFlatAPI} from '../../hooks/usePostFlatsAPI.tsx'
-import {usePutFlatAPI} from "../../hooks/usePutFlatsAPI.tsx";
+import {useAddFlatAPI} from '../../hooks/useAddFlatAPI.tsx'
+import {useEditFlatAPI} from "../../hooks/useEditFlatAPI.tsx";
 
 interface IProps {
     handleSuccess: () => void
@@ -37,7 +36,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
             hasAnswer: flat.hasAnswer ?? false,
         }
     });
-    const {register, control, handleSubmit, formState} = form
+    const {register, handleSubmit, formState} = form
     const {errors} = formState
 
     const onSuccess = () => {
@@ -47,10 +46,10 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
         if (Object.keys(flat).length > 0) {
             data.id = flat.id
             data.isVisible = flat.isVisible
-            return usePutFlatAPI(data, onSuccess)
+            return useEditFlatAPI(data, onSuccess)
         } else {
             data.isVisible = true
-            return usePostFlatAPI(data, onSuccess);
+            return useAddFlatAPI(data, onSuccess);
         }
     }
 
@@ -207,7 +206,6 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
 
                 </button>
             </form>
-            <DevTool control={control}/>
         </>
     )
 }

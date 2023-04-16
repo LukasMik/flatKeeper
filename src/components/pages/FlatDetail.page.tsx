@@ -5,7 +5,7 @@ import {useFlatByIdAPI} from "../../hooks/useFlatByIdAPI.tsx";
 import {
     AiFillHeart,
     AiOutlineHeart,
-    AiOutlineLayout, BiLink, BsMailbox, BsSendCheck, FiMapPin,
+    AiOutlineLayout, BiLink, BsMailbox, BsSendCheck, BsTrash3, BsTrash3Fill, FiMapPin,
     IoResize, MdOutlineEventAvailable, RiPinDistanceLine,
     SiMetrodeparis,
     TbDiamond, TbSofa
@@ -13,6 +13,7 @@ import {
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 import {EditFeaturesModal} from "../modals/EditFeaturesModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
+import {editFlat} from "../../services/editFlat.ts";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()
@@ -22,8 +23,6 @@ export const FlatDetailPage = () => {
     useEffect(() => {
         id ? useFlatByIdAPI(id).then(flat => setFlat(flat)) : null
     }, [id, reload])
-
-    useEffect(() => console.log('reload'), [reload])
 
     if (!flat)
         return null
@@ -35,22 +34,35 @@ export const FlatDetailPage = () => {
                      className='w-full h-full object-cover rounded-3xl'/>
                 <div className='absolute top-6 right-6' title='Edit flat'>
                     <button
-                        className='flex items-center gap-4 text-gray-100 text-6xl hover:scale-110 transform transition-all mb-6'>
+                        onClick={() => editFlat('favourite', flat, () => setReload(!reload))}
+                        className='block text-6xl hover:scale-110 transform transition-all mb-6'>
                         {flat.isFavorite ?
                             <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
                             <AiOutlineHeart className='drop-shadow-lg text-red-600' title='Set as favourite'/>
                         }
                     </button>
-                    <FlatContextProvider flat={flat}>
-                        <EditFlatModal status='edit' doReload={() => setReload(!reload)}/>
-                    </FlatContextProvider>
+                    <button
+                        onClick={() => editFlat('delete', flat, () => setReload(!reload))}
+                        className='block text-6xl hover:scale-110 transform transition-all mb-6'>
+                        {flat.isVisible ?
+                            <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
+                            <BsTrash3Fill className='drop-shadow-lg text-gray-600' title='Restore'/>
+                        }
+                    </button>
                 </div>
                 <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
                     <TbDiamond className='drop-shadow-lg'/>
                     <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
                 </div>
-                <div className="absolute bottom-6 right-6" title='Edit features'>
-                    <EditFeaturesModal/>
+                <div className="absolute bottom-6 right-6 flex flex-col gap-4">
+                    <button title='Edit flat'>
+                        <FlatContextProvider flat={flat}>
+                            <EditFlatModal status='edit' doReload={() => setReload(!reload)}/>
+                        </FlatContextProvider>
+                    </button>
+                    <div title='Add features'>
+                        <EditFeaturesModal/>
+                    </div>
                 </div>
             </div>
             <div className="flex justify-between p-6">
@@ -68,7 +80,8 @@ export const FlatDetailPage = () => {
                 <div className='text-right'>
                     {flat.includeEnergies ?
                         <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč</p> :
-                        <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč <span className='text-lg'>+ energy</span></p>
+                        <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč <span
+                            className='text-lg'>+ energy</span></p>
                     }
                     {flat.deposit ?
                         <p className="text-2xl">
@@ -85,17 +98,20 @@ export const FlatDetailPage = () => {
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <SiMetrodeparis className='text-2xl'/>
                         <span>Metro distance:</span>
-                        <span className='font-bold'>{flat.metroDistance ? `${flat.metroDistance} min walk` : 'No data'}</span>
+                        <span
+                            className='font-bold'>{flat.metroDistance ? `${flat.metroDistance} min walk` : 'No data'}</span>
                     </li>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <RiPinDistanceLine className='text-2xl'/>
                         <span>Infinit:</span>
-                        <span className='font-bold'>{flat.distanceToInfinit ? `${flat.distanceToInfinit} min MHD` : 'No data'}</span>
+                        <span
+                            className='font-bold'>{flat.distanceToInfinit ? `${flat.distanceToInfinit} min MHD` : 'No data'}</span>
                     </li>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <RiPinDistanceLine className='text-2xl'/>
                         <span>Smartlook:</span>
-                        <span className='font-bold'>{flat.distanceToSmartlook ? `${flat.distanceToSmartlook} min MHD` : 'No data'}</span>
+                        <span
+                            className='font-bold'>{flat.distanceToSmartlook ? `${flat.distanceToSmartlook} min MHD` : 'No data'}</span>
                     </li>
                 </ul>
                 <ul>

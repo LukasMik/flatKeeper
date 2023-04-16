@@ -2,7 +2,6 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {Navigation} from "./components/Navigation.tsx";
 import {HomePage} from "./components/pages/HomePage.tsx";
 import {ListPage} from "./components/pages/List.page.tsx";
-import {HistoryPage} from "./components/pages/History.page.tsx";
 import {FlatDetailPage} from "./components/pages/FlatDetail.page.tsx";
 
 export const App = () => {
@@ -14,7 +13,7 @@ export const App = () => {
                 <Routes>
                     <Route path={'/'} element={<HomePage/>}/>
                     <Route path={'/list'} element={<ListPage/>}/>
-                    <Route path={'/history'} element={<HistoryPage/>}/>
+                    <Route path={'/history'} element={<HomePage/>}/>
                     <Route path={'/flat-detail/:id'} element={<FlatDetailPage/>}/>
                 </Routes>
             </div>

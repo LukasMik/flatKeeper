@@ -9,7 +9,7 @@
       "layout": "2+kk",
       "photo": "https://api.bezrealitky.cz/media/cache/record_main/data/images/advert/98k/98530/1681205773-fdlhmosdjt-phpyojxi4.jpg",
       "prettyScore": 9,
-      "isFavorite": "true",
+      "isFavorite": true,
       "metroDistance": 11,
       "distanceToInfinit": 23,
       "distanceToSmartlook": 33,
@@ -37,7 +37,7 @@
       "layout": "2+kk",
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F689k%2F689954%2F1635956792-bbntnbpafe.jpg&w=750&q=75",
       "prettyScore": 8,
-      "isFavorite": "true",
+      "isFavorite": true,
       "metroDistance": 3,
       "distanceToInfinit": 18,
       "distanceToSmartlook": 15,
@@ -65,7 +65,7 @@
       "layout": "2+kk",
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QL_Jz/eqdC0q.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90,",
       "prettyScore": 8,
-      "isFavorite": false,
+      "isFavorite": true,
       "metroDistance": 22,
       "distanceToInfinit": 30,
       "distanceToSmartlook": 28,
@@ -174,7 +174,7 @@
       "sentMessage": false,
       "hasAnswer": false,
       "id": 9,
-      "isVisible": true
+      "isVisible": false
     }
   ]
 }

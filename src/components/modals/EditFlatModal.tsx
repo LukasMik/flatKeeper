@@ -5,16 +5,16 @@ import {useState} from "react";
 
 interface IStatus {
     status: 'new' | 'edit'
-    doReload: () => void
+    onOpenChange: () => void
 }
 
-export const EditFlatModal = ({status, doReload}: IStatus) => {
+export const EditFlatModal = ({status, onOpenChange}: IStatus) => {
     const [formSuccess, setFormSuccess] = useState<boolean>(false)
 
     const onSuccess = () => setFormSuccess(true)
 
     const handleOpenChange = () => {
-        doReload()
+        onOpenChange()
     }
     const dialogContent = () => {
         if (formSuccess && status === 'new') {

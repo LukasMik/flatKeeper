@@ -46,7 +46,7 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                             </ul>
                             <ul className='text-center'>
                                 <li className='font-bold transform group-hover:scale-110 duration-300 group-hover:pt-2'>
-                                    {flat.price.toLocaleString()} Kč
+                                    {Number(flat.price).toLocaleString()} Kč
                                     <span className='text-sm'>{!flat.includeEnergies && ' + Energy'}</span>
                                 </li>
                             </ul>
@@ -61,11 +61,11 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                                 </li>
                                 {flat.deposit ?
                                 <li>
-                                    <RiLuggageDepositLine/><span>Deposit:</span><span>{flat.deposit.toLocaleString()} Kč</span>
+                                    <RiLuggageDepositLine/><span>Deposit:</span><span>{Number(flat.deposit).toLocaleString()} Kč</span>
                                 </li> : null}
                                 {flat.commission ?
                                     <li>
-                                        <BsPiggyBank/><span>Commission:</span><span>{flat.commission.toLocaleString()} Kč</span>
+                                        <BsPiggyBank/><span>Commission:</span><span>{Number(flat.commission).toLocaleString()} Kč</span>
                                     </li> : null
                                 }
                                 <li>

@@ -57,7 +57,7 @@ export const FlatDetailPage = () => {
                 <div className="absolute bottom-6 right-6 flex flex-col gap-4">
                     <button title='Edit flat'>
                         <FlatContextProvider flat={flat}>
-                            <EditFlatModal status='edit' doReload={() => setReload(!reload)}/>
+                            <EditFlatModal status='edit' onOpenChange={() => setReload(!reload)}/>
                         </FlatContextProvider>
                     </button>
                     <div title='Add features'>
@@ -79,17 +79,17 @@ export const FlatDetailPage = () => {
                 </div>
                 <div className='text-right'>
                     {flat.includeEnergies ?
-                        <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč</p> :
-                        <p className="text-3xl font-bold mb-4">{flat.price.toLocaleString()} Kč <span
+                        <p className="text-3xl font-bold mb-4">{Number(flat.price).toLocaleString()} Kč</p> :
+                        <p className="text-3xl font-bold mb-4">{Number(flat.price).toLocaleString()} Kč <span
                             className='text-lg'>+ energy</span></p>
                     }
                     {flat.deposit ?
                         <p className="text-2xl">
-                            <span className="mr-2 text-xl"> Deposit: </span>{flat.deposit.toLocaleString()} Kč
+                            <span className="mr-2 text-xl"> Deposit: </span>{Number(flat.deposit).toLocaleString()} Kč
                         </p> : null}
                     {flat.commission ?
                         <p className="text-2xl">
-                            <span className="mr-2 text-xl"> Commission: </span> {flat.commission.toLocaleString()} Kč
+                            <span className="mr-2 text-xl"> Commission: </span> {Number(flat.commission).toLocaleString()} Kč
                         </p> : null}
                 </div>
             </div>

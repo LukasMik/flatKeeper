@@ -43,7 +43,7 @@ export const HomePage = () => {
                 </div>
                 <div className="fixed bottom-6 right-6">
                     <div title='Add new flat'>
-                        <EditFlatModal status='new' doReload={() => setReload(!reload)}/>
+                        <EditFlatModal status='new' onOpenChange={() => setReload(!reload)}/>
                     </div>
                 </div>
             </>

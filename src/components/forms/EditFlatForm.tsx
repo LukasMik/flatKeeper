@@ -34,6 +34,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
             includeEnergies: flat.includeEnergies ?? false,
             sentMessage: flat.sentMessage ?? false,
             hasAnswer: flat.hasAnswer ?? false,
+            note: flat.note ?? null,
         }
     });
     const {register, handleSubmit, formState} = form
@@ -200,10 +201,16 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                                className='checkbox-styles mx-auto'/>
                     </div>
                 </div>
+                <div className="flex justify-center">
+                    <div className="w-1/2">
+                        <label htmlFor="note" className="text-xl block text-center">Note</label>
+                        <textarea rows={4} id="note" {...register('note')}
+                               className='input-styles h-24'/>
+                    </div>
+                </div>
                 <button
                     className='px-6 py-3 rounded-md bg-gray-300 mt-8 block mx-auto text-black hover:bg-gray-400 hover:scale-105 transition-all'>
                     Confirm
-
                 </button>
             </form>
         </>

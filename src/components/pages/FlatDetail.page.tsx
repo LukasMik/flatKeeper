@@ -150,6 +150,7 @@ export const FlatDetailPage = () => {
                     </li>
                 </ul>
             </div>
+            {flat.note && <p className='text-xl ml-6'><strong>Note: </strong><br/>{flat.note}</p>}
         </div>
     )
 }

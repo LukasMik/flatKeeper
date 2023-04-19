@@ -1,3 +1,5 @@
+import {IconType} from "react-icons";
+
 export interface IFlat {
     id: number
     name: string
@@ -21,4 +23,13 @@ export interface IFlat {
     includeEnergies: boolean
     sentMessage: boolean
     hasAnswer: boolean
+    requires: IRequire[]
+    note: string
+}
+
+export interface IRequire {
+    id: number,
+    severity: string,
+    name: string,
+    icon: IconType,
 }

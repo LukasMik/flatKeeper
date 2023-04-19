@@ -1,0 +1,1 @@
+export const NETWORKAPIURL: string = '192.168.100.7'

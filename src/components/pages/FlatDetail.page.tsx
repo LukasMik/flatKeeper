@@ -55,11 +55,11 @@ export const FlatDetailPage = () => {
                     <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
                 </div>
                 <div className="absolute bottom-6 right-6 flex flex-col gap-4">
-                    <button title='Edit flat'>
+                    <div title='Edit flat'>
                         <FlatContextProvider flat={flat}>
                             <EditFlatModal status='edit' onOpenChange={() => setReload(!reload)}/>
                         </FlatContextProvider>
-                    </button>
+                    </div>
                     <div title='Add features'>
                         <EditRequiresModal/>
                     </div>

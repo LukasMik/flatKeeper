@@ -11,9 +11,9 @@ import {
     TbDiamond, TbSofa
 } from "react-icons/all";
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
-import {EditFeaturesModal} from "../modals/EditFeaturesModal.tsx";
+import {EditRequiresModal} from "../modals/EditRequiresModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
-import {editFlat} from "../../services/editFlat.ts";
+import {toggleFlat} from "../../services/toggleFlat.ts";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()
@@ -34,7 +34,7 @@ export const FlatDetailPage = () => {
                      className='w-full h-full object-cover rounded-3xl'/>
                 <div className='absolute top-6 right-6' title='Edit flat'>
                     <button
-                        onClick={() => editFlat('favourite', flat, () => setReload(!reload))}
+                        onClick={() => toggleFlat('favourite', flat, () => setReload(!reload))}
                         className='block text-6xl hover:scale-110 transform transition-all mb-6'>
                         {flat.isFavorite ?
                             <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
@@ -42,7 +42,7 @@ export const FlatDetailPage = () => {
                         }
                     </button>
                     <button
-                        onClick={() => editFlat('delete', flat, () => setReload(!reload))}
+                        onClick={() => toggleFlat('delete', flat, () => setReload(!reload))}
                         className='block text-6xl hover:scale-110 transform transition-all mb-6'>
                         {flat.isVisible ?
                             <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
@@ -61,7 +61,7 @@ export const FlatDetailPage = () => {
                         </FlatContextProvider>
                     </button>
                     <div title='Add features'>
-                        <EditFeaturesModal/>
+                        <EditRequiresModal/>
                     </div>
                 </div>
             </div>

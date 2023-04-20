@@ -427,10 +427,10 @@
       "commission": "24500",
       "includeEnergies": true,
       "sentMessage": true,
-      "hasAnswer": false,
-      "requires": [],
-      "isVisible": true,
-      "id": 20
+      "hasAnswer": true,
+      "note": null,
+      "id": 20,
+      "isVisible": true
     },
     {
       "name": "Smíchov terasa",

@@ -33,3 +33,9 @@ export interface IRequire {
     name: string,
     icon: IconType,
 }
+
+export enum Severity {
+    Required = 'required',
+    Optional = 'optional',
+    Bonus = 'bonus'
+}

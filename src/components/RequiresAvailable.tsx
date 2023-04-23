@@ -1,23 +1,27 @@
 import {ALLREQUIRES} from "../constants/requires.ts";
-import {IRequire, Severity} from "../types.ts";
-import {requireColor} from "../services/requireColor.ts";
+import {IRequire, RequireAction, Severity} from "../types.ts";
+import {useFlatContext} from "../contexts/flatContext.tsx";
+import {RequireItem} from "./RequireItem.tsx";
 
 interface IProps {
     severity: Severity
+    onSuccess: () => void,
 }
 
-export const RequiresAvailable = ({severity}: IProps) => {
-    return (
-        <>
-            <p className="text-2xl mb-4">{severity.charAt(0).toUpperCase() + severity.slice(1)}</p>
-            <div className="flex gap-4 mb-4">
-                {ALLREQUIRES.map((r: IRequire) => r.severity === severity &&
-                    <div
-                        className={`text-3xl mb-4 flex flex-col items-center hover:scale-125 transition-all transform cursor-pointer ${requireColor(severity)}`}
-                        key={r.id}>
-                        <r.icon title={r.name}/>
-                    </div>)}
-            </div>
-        </>
-    )
+export const RequiresAvailable = ({severity, onSuccess}: IProps) => {
+    const flat = useFlatContext()
+        return (
+            <>
+                <p className="text-2xl mb-4">{severity.charAt(0).toUpperCase() + severity.slice(1)}</p>
+                <div className="flex gap-4 mb-4">
+                    {ALLREQUIRES.map((r: IRequire) => {
+                        const isUsed = flat.requires.some(req => req.id === r.id)
+                        if (r.severity === severity) {
+                            return <RequireItem key={r.id} require={r} isUsed={isUsed} onSuccess={onSuccess}
+                                                requireAction={RequireAction.Add}/>
+                        }
+                    })}
+                </div>
+            </>
+        )
 }

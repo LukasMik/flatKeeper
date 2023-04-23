@@ -39,3 +39,8 @@ export enum Severity {
     Optional = 'optional',
     Bonus = 'bonus'
 }
+
+export enum RequireAction {
+    Remove = 'remove',
+    Add = 'add'
+}

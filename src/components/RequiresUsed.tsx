@@ -1,21 +1,22 @@
-import {IRequire, Severity} from "../types.ts";
+import {IRequire, RequireAction, Severity} from "../types.ts";
 import {ALLREQUIRES} from "../constants/requires.ts";
-import {requireColor} from "../services/requireColor.ts";
+import {RequireItem} from "./RequireItem.tsx";
 
 interface IProps {
     severity: Severity
+    requires?: IRequire[]
+    onSuccess: () => void
 }
 
-export const RequiresUsed = ({severity}: IProps) => {
+export const RequiresUsed = ({severity, requires, onSuccess}: IProps) => {
+    const requireItems = requires ? ALLREQUIRES.filter(i => requires.map(r => r.id).includes(i.id)) : null
+
     return (
         <>
             <div className="">
-                {ALLREQUIRES.map((r: IRequire) => r.severity === severity &&
-                    <div
-                        className={`text-3xl mb-4 flex flex-col items-center text-red-800 hover:scale-125 transition-all transform cursor-pointer ${requireColor(severity)}`}
-                        key={r.id}>
-                        <r.icon title={r.name}/>
-                    </div>)}
-            </div></>
+                {requireItems?.map((r: IRequire) => r.severity === severity &&
+                    <RequireItem key={r.id} require={r} requireAction={RequireAction.Remove} onSuccess={onSuccess} />)}
+            </div>
+        </>
     )
 }

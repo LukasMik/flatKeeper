@@ -1,8 +1,8 @@
 import axios from "axios";
 import {IFlat} from "../types.ts";
 
-export const useFlatByIdAPI = (id: string): Promise<IFlat | null> => {
-    return axios.get<IFlat>(`http://localhost:3000/flats/${id}`)
+export const useFlatByIdAPI = async (id: string | number): Promise<IFlat | null> => {
+    return await axios.get<IFlat>(`http://localhost:3000/flats/${id.toString()}`)
         .then(res => {
             return res.data
         })

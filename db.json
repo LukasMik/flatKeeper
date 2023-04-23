@@ -46,7 +46,18 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": []
+      "requires": [
+        {
+          "id": 101,
+          "severity": "optional",
+          "name": "Terrace"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        }
+      ]
     },
     {
       "id": 3,
@@ -70,7 +81,13 @@
       "includeEnergies": false,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": []
+      "requires": [
+        {
+          "id": 203,
+          "severity": "bonus",
+          "name": "Air conditioning"
+        }
+      ]
     },
     {
       "name": "Old town, near river",
@@ -164,9 +181,31 @@
       "includeEnergies": false,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "note": "note\n",
       "id": 9,
-      "isVisible": false
+      "isVisible": false,
+      "requires": [
+        {
+          "id": 205,
+          "severity": "bonus",
+          "name": "City view"
+        },
+        {
+          "id": 206,
+          "severity": "bonus",
+          "name": "Work room"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        }
+      ]
     },
     {
       "name": "Rezidence Pergamenka",
@@ -286,7 +325,7 @@
       "hasAnswer": false,
       "requires": [],
       "id": 14,
-      "isVisible": true
+      "isVisible": false
     },
     {
       "name": "Terasa strasnice",
@@ -428,7 +467,7 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": true,
-      "note": null,
+      "note": "Prohlidka pondeli ve 14:00\nDostupne od pulky cervence\nPotvrdit panovi v na 704 972 648",
       "id": 20,
       "isVisible": true
     },
@@ -455,6 +494,30 @@
       "note": "5. patro bez vytahu",
       "id": 21,
       "isVisible": true
+    },
+    {
+      "name": "House boat",
+      "link": "https://reality.idnes.cz/detail/pronajem/byt/praha-7-v-pristavu/64414eb0095deafeb00fa8d5/#utm_source=poptavka&utm_medium=email&utm_campaign=potvrzeni_poptavky&utm_content=offer-title",
+      "size": "70",
+      "layout": "2+kk",
+      "photo": "https://sta-reality2.1gr.cz/sta/compile/thumbs/a/6/f/7c7c149ecbaa8aad1d34b01b5b3f4.jpg",
+      "prettyScore": "9",
+      "isFavorite": false,
+      "metroDistance": "16",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": true,
+      "district": "Holešovice",
+      "availableFrom": "Now",
+      "price": "27900",
+      "deposit": "45000",
+      "commission": "27900",
+      "includeEnergies": true,
+      "sentMessage": true,
+      "hasAnswer": false,
+      "note": "Zjistit jestli energie jsou v cene najmu",
+      "isVisible": true,
+      "id": 22
     }
   ]
 }

@@ -11,7 +11,7 @@ import {
     TbDiamond, TbSofa
 } from "react-icons/all";
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
-import {EditRequirementsModal} from "../modals/EditRequirementsModal.tsx";
+import {EditFlatFeaturesModal} from "../modals/EditFlatFeaturesModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
 import {toggleFlatData} from "../../services/toggleFlatData.ts";
 
@@ -63,8 +63,8 @@ export const FlatDetailPage = () => {
                                 <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)} isFormPrepared={isEditFormPrepared}/>
                             </div>
                         </FlatContextProvider>
-                        <div title='Add requirement'>
-                            <EditRequirementsModal/>
+                        <div title='Add feature'>
+                            <EditFlatFeaturesModal/>
                         </div>
                     </div>
                     <div title='Add features'>

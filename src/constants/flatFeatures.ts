@@ -9,9 +9,9 @@ import {
     TbGrill, TbToiletPaper,
     VscSquirrel
 } from "react-icons/all";
-import {IRequirement} from "../types.ts";
+import {IFlatFeature} from "../types.ts";
 
-export const ALLREQUIREMENTS: IRequirement[] = [
+export const ALLFLATFEATURES: IFlatFeature[] = [
 // Required
     {
         id: 1,

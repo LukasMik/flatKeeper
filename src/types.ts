@@ -23,11 +23,11 @@ export interface IFlat {
     includeEnergies: boolean
     sentMessage: boolean
     hasAnswer: boolean
-    requirements: IRequirement[]
+    features: IFlatFeature[]
     note: string
 }
 
-export interface IRequirement {
+export interface IFlatFeature {
     id: number,
     severity: string,
     name: string,
@@ -40,7 +40,7 @@ export enum Severity {
     Bonus = 'bonus'
 }
 
-export enum RequirementAction {
+export enum FlatFeatureAction {
     Remove = 'remove',
     Add = 'add'
 }

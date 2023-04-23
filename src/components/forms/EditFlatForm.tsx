@@ -44,11 +44,11 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
         if (Object.keys(flat).length > 0) {
             data.id = flat.id
             data.isVisible = flat.isVisible
-            data.requirements = flat.requirements
+            data.features = flat.features
             return editFlatAPI(data, handleSuccess)
         } else {
             data.isVisible = true
-            return addFlatAPI({...data, requirements: []}, handleSuccess);
+            return addFlatAPI({...data, features: []}, handleSuccess);
         }
     }
 

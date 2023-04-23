@@ -1,17 +1,20 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import {AiOutlinePlus, BsPencilFill, RxCross2} from "react-icons/all";
 import {EditFlatForm} from "../forms/EditFlatForm.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 interface IStatus {
     status: 'new' | 'edit'
     onOpenChange: () => void
+    isFormPrepared: boolean
 }
 
-export const EditFlatModal = ({status, onOpenChange}: IStatus) => {
+export const EditFlatModal = ({status, onOpenChange, isFormPrepared}: IStatus) => {
     const [formSuccess, setFormSuccess] = useState<boolean>(false)
+    useEffect(() => {
+           isFormPrepared ? setFormSuccess(false) : null
+    }, [isFormPrepared]);
 
-    const onSuccess = () => setFormSuccess(true)
 
     const handleOpenChange = () => {
         onOpenChange()
@@ -22,7 +25,7 @@ export const EditFlatModal = ({status, onOpenChange}: IStatus) => {
         } else if (formSuccess && status === 'edit') {
             return <p className="text-3xl text-center py-24">Flat has been successfully edited!</p>
         } else {
-            return <EditFlatForm handleSuccess={onSuccess}/>
+            return <EditFlatForm handleSuccess={() => setFormSuccess(true)} />
         }
     }
 

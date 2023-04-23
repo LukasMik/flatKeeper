@@ -10,6 +10,7 @@ interface IProps {
 
 export const RequiresAvailable = ({severity, onSuccess}: IProps) => {
     const flat = useFlatContext()
+    if (flat) {
         return (
             <>
                 <p className="text-2xl mb-4">{severity.charAt(0).toUpperCase() + severity.slice(1)}</p>
@@ -24,4 +25,5 @@ export const RequiresAvailable = ({severity, onSuccess}: IProps) => {
                 </div>
             </>
         )
+    }
 }

@@ -19,10 +19,11 @@ export const FlatDetailPage = () => {
     const {id} = useParams()
     const [flat, setFlat] = useState<IFlat | null>(null)
     const [reload, setReload] = useState<boolean>(false)
+    const [isEditFormPrepared, setIsEditFormPrepared] = useState<boolean>(false)
 
     useEffect(() => {
         id ? useFlatByIdAPI(id).then(flat => setFlat(flat)) : null
-    }, [id, reload])
+    }, [id, reload, isEditFormPrepared])
 
     if (!flat)
         return null
@@ -58,8 +59,8 @@ export const FlatDetailPage = () => {
                     </div>
                     <div className="absolute bottom-6 right-6 flex flex-col gap-4">
                         <FlatContextProvider flat={flat}>
-                            <div title='Edit flat'>
-                                <EditFlatModal status='edit' onOpenChange={() => setReload(!reload)}/>
+                            <div title='Edit flat' onClick={() => setIsEditFormPrepared(true)}>
+                                <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)} isFormPrepared={isEditFormPrepared}/>
                             </div>
                         </FlatContextProvider>
                         <div title='Add requires'>

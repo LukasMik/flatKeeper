@@ -9,10 +9,11 @@ import {useLocation} from "react-router-dom";
 export const HomePage = () => {
     const [flats, setFlats] = useState<IFlat[]>([])
     const [reload, setReload] = useState<boolean>(false)
+    const [isFormPrepared, setIsFormPrepared] = useState<boolean>(false)
 
     useEffect(() => {
         useAllFlatsAPI().then(flats => setFlats(flats))
-    }, [reload])
+    }, [reload, isFormPrepared])
 
     if(useLocation().pathname === '/history') {
         return (
@@ -42,8 +43,8 @@ export const HomePage = () => {
                                              handleEdit={(status, flat) => toggleFlat(status, flat, () => setReload(!reload))}/>})}
                 </div>
                 <div className="fixed bottom-6 right-6">
-                    <div title='Add new flat'>
-                        <EditFlatModal status='new' onOpenChange={() => setReload(!reload)}/>
+                    <div title='Add new flat' onClick={() => setIsFormPrepared(true)}>
+                        <EditFlatModal status='new' onOpenChange={() => setIsFormPrepared(false)} isFormPrepared={isFormPrepared}/>
                     </div>
                 </div>
             </>

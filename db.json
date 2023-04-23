@@ -33,7 +33,7 @@
       "layout": "2+kk",
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F689k%2F689954%2F1635956792-bbntnbpafe.jpg&w=750&q=75",
       "prettyScore": 8,
-      "isFavorite": true,
+      "isFavorite": false,
       "metroDistance": 3,
       "distanceToInfinit": 18,
       "distanceToSmartlook": 15,
@@ -46,18 +46,7 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": [
-        {
-          "id": 101,
-          "severity": "optional",
-          "name": "Terrace"
-        },
-        {
-          "id": 3,
-          "severity": "required",
-          "name": "Metro"
-        }
-      ]
+      "requires": []
     },
     {
       "id": 3,
@@ -68,7 +57,7 @@
       "layout": "2+kk",
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QL_Jz/eqdC0q.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90,",
       "prettyScore": 8,
-      "isFavorite": true,
+      "isFavorite": false,
       "metroDistance": 22,
       "distanceToInfinit": 30,
       "distanceToSmartlook": 28,
@@ -83,9 +72,34 @@
       "hasAnswer": false,
       "requires": [
         {
-          "id": 203,
-          "severity": "bonus",
-          "name": "Air conditioning"
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 101,
+          "severity": "optional",
+          "name": "Terrace"
         }
       ]
     },
@@ -134,7 +148,7 @@
       "sentMessage": false,
       "hasAnswer": false,
       "requires": [],
-      "isVisible": true,
+      "isVisible": false,
       "id": 7
     },
     {
@@ -159,7 +173,7 @@
       "hasAnswer": false,
       "requires": [],
       "id": 8,
-      "isVisible": true
+      "isVisible": false
     },
     {
       "name": "tefusivfesibfeslkbfksebf",
@@ -175,35 +189,45 @@
       "equipped": false,
       "district": "2",
       "availableFrom": "June",
+      "sentMessage": false,
       "price": "2",
       "deposit": "5",
       "commission": "",
       "includeEnergies": false,
-      "sentMessage": false,
       "hasAnswer": false,
-      "note": "note\n",
+      "note": "notesss\nssssss nsdces dwaddwzsccscszsczsc",
       "id": 9,
       "isVisible": false,
       "requires": [
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 103,
+          "severity": "optional",
+          "name": "<50 m2"
+        },
         {
           "id": 205,
           "severity": "bonus",
           "name": "City view"
         },
         {
-          "id": 206,
+          "id": 203,
           "severity": "bonus",
-          "name": "Work room"
+          "name": "Air conditioning"
         },
         {
-          "id": 3,
-          "severity": "required",
-          "name": "Metro"
+          "id": 204,
+          "severity": "bonus",
+          "name": "Parking"
         },
         {
-          "id": 8,
+          "id": 9,
           "severity": "required",
-          "name": "Hanging chair"
+          "name": "Dishwasher"
         }
       ]
     },
@@ -252,7 +276,7 @@
       "sentMessage": false,
       "hasAnswer": false,
       "requires": [],
-      "isVisible": true,
+      "isVisible": false,
       "id": 11
     },
     {
@@ -348,7 +372,7 @@
       "sentMessage": false,
       "hasAnswer": false,
       "requires": [],
-      "isVisible": true,
+      "isVisible": false,
       "id": 15
     },
     {
@@ -358,7 +382,7 @@
       "layout": "2+kk",
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F515k%2F515868%2F1623418198-jazlfysjtv.jpg&w=384&q=75",
       "prettyScore": "9",
-      "isFavorite": true,
+      "isFavorite": false,
       "metroDistance": "",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -373,7 +397,7 @@
       "hasAnswer": false,
       "requires": [],
       "id": 16,
-      "isVisible": true
+      "isVisible": false
     },
     {
       "name": "Disco koule :D",
@@ -421,7 +445,7 @@
       "hasAnswer": false,
       "requires": [],
       "id": 18,
-      "isVisible": true
+      "isVisible": false
     },
     {
       "name": "Zizkov terasa",
@@ -444,7 +468,7 @@
       "sentMessage": true,
       "hasAnswer": false,
       "requires": [],
-      "isVisible": true,
+      "isVisible": false,
       "id": 19
     },
     {
@@ -454,7 +478,7 @@
       "layout": "2+kk",
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QK_Jk/cGqnYg.jpeg?fl=res,1920,1080,1|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
       "prettyScore": "8",
-      "isFavorite": false,
+      "isFavorite": true,
       "metroDistance": "15",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -467,8 +491,45 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": true,
-      "note": "Prohlidka pondeli ve 14:00\nDostupne od pulky cervence\nPotvrdit panovi v na 704 972 648",
+      "note": "Prohlidka pondeli ve 14:00, \nDostupne od pulky cervence, \nZjistit pripojku na pracku a susicku, \nRozmer telky 140cm\n\nPotvrdit panovi v na 704 972 648",
       "id": 20,
+      "requires": [
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 101,
+          "severity": "optional",
+          "name": "Terrace"
+        },
+        {
+          "id": 204,
+          "severity": "bonus",
+          "name": "Parking"
+        },
+        {
+          "id": 205,
+          "severity": "bonus",
+          "name": "City view"
+        }
+      ],
       "isVisible": true
     },
     {
@@ -491,8 +552,70 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": false,
-      "note": "5. patro bez vytahu",
+      "note": "5. patro bez vytahu, nejspis hluk z koleji, brutalni vyhled",
       "id": 21,
+      "requires": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 101,
+          "severity": "optional",
+          "name": "Terrace"
+        },
+        {
+          "id": 102,
+          "severity": "optional",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 103,
+          "severity": "optional",
+          "name": "<50 m2"
+        },
+        {
+          "id": 205,
+          "severity": "bonus",
+          "name": "City view"
+        }
+      ],
       "isVisible": true
     },
     {
@@ -517,7 +640,89 @@
       "hasAnswer": false,
       "note": "Zjistit jestli energie jsou v cene najmu",
       "isVisible": true,
+      "requires": [],
       "id": 22
+    },
+    {
+      "name": "Zrcadla",
+      "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/640631-nabidka-pronajem-bytu-kratka-praha",
+      "size": "72",
+      "layout": "2+kk",
+      "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F640k%2F640631%2F1606229371-uxianwsxav.jpg&w=750&q=75",
+      "prettyScore": "7",
+      "isFavorite": true,
+      "metroDistance": "8",
+      "distanceToInfinit": null,
+      "distanceToSmartlook": null,
+      "equipped": false,
+      "district": "Vinohrady",
+      "availableFrom": "June",
+      "price": "22000",
+      "deposit": "22000",
+      "commission": null,
+      "includeEnergies": false,
+      "sentMessage": true,
+      "hasAnswer": false,
+      "note": "4. patro bez vytahu",
+      "isVisible": true,
+      "requires": [
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 101,
+          "severity": "optional",
+          "name": "Terrace"
+        },
+        {
+          "id": 102,
+          "severity": "optional",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 201,
+          "severity": "bonus",
+          "name": "Bathtub"
+        },
+        {
+          "id": 203,
+          "severity": "bonus",
+          "name": "Air conditioning"
+        },
+        {
+          "id": 103,
+          "severity": "optional",
+          "name": "<50 m2"
+        }
+      ],
+      "id": 23
     }
   ]
 }

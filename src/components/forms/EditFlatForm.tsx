@@ -28,11 +28,11 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
             equipped: flat.equipped ?? false,
             district: flat.district ?? null,
             availableFrom: flat.availableFrom ?? 'June',
+            sentMessage: flat.sentMessage ?? false,
             price: flat.price ?? null,
             deposit: flat.deposit ?? null,
             commission: flat.commission ?? null,
             includeEnergies: flat.includeEnergies ?? false,
-            sentMessage: flat.sentMessage ?? false,
             hasAnswer: flat.hasAnswer ?? false,
             note: flat.note ?? null,
         }
@@ -40,17 +40,15 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
     const {register, handleSubmit, formState} = form
     const {errors} = formState
 
-    const onSuccess = () => {
-        handleSuccess()
-    }
     const onSubmit = (data: IFlat) => {
         if (Object.keys(flat).length > 0) {
             data.id = flat.id
             data.isVisible = flat.isVisible
-            return useEditFlatAPI(data, onSuccess)
+            data.requires = flat.requires
+            return useEditFlatAPI(data, handleSuccess)
         } else {
             data.isVisible = true
-            return useAddFlatAPI(data, onSuccess);
+            return useAddFlatAPI({...data, requires: []}, handleSuccess);
         }
     }
 

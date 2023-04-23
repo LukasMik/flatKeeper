@@ -1,7 +1,7 @@
 import axios from "axios";
 import {IFlat} from "../types.ts";
 
-export const useAllFlatsAPI = (): Promise<IFlat[] | never[]> => {
+export const getAllFlatsAPI = (): Promise<IFlat[] | never[]> => {
     return axios.get<IFlat[]>('http://localhost:3000/flats')
         .then(res => {
             return res.data

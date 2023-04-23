@@ -9,9 +9,9 @@ import {
     TbGrill, TbToiletPaper,
     VscSquirrel
 } from "react-icons/all";
-import {IRequire} from "../types.ts";
+import {IRequirement} from "../types.ts";
 
-export const ALLREQUIRES: IRequire[] = [
+export const ALLREQUIREMENTS: IRequirement[] = [
 // Required
     {
         id: 1,

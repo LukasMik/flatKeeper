@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import {IFlat} from "../../types.ts";
-import {useAllFlatsAPI} from "../../hooks/useAllFlatsAPI.tsx";
+import {getAllFlatsAPI} from "../../apiServices/getAllFlatsAPI.tsx";
 import {FlatItem} from "../FlatItem.tsx";
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
-import {toggleFlat} from "../../services/toggleFlat.ts";
+import {toggleFlatData} from "../../services/toggleFlatData.ts";
 import {useLocation} from "react-router-dom";
 
 export const HomePage = () => {
@@ -12,7 +12,7 @@ export const HomePage = () => {
     const [isFormPrepared, setIsFormPrepared] = useState<boolean>(false)
 
     useEffect(() => {
-        useAllFlatsAPI().then(flats => setFlats(flats))
+        getAllFlatsAPI().then(flats => setFlats(flats))
     }, [reload, isFormPrepared])
 
     if(useLocation().pathname === '/history') {
@@ -21,7 +21,7 @@ export const HomePage = () => {
                 <h3 className='mb-12 text-center'>History:</h3>
                 <div className='flex items-cenetr justify-center flex-wrap gap-20'>
                     {flats.length > 0 && flats.filter(flat => !flat.isVisible)
-                        .map(flat => <FlatItem key={flat.id} flat={flat} handleEdit={(status, flat) => toggleFlat(status, flat, () => setReload(!reload))}/>)}
+                        .map(flat => <FlatItem key={flat.id} flat={flat} handleEdit={(status, flat) => toggleFlatData(status, flat, () => setReload(!reload))}/>)}
                 </div>
             </>
         )
@@ -33,14 +33,14 @@ export const HomePage = () => {
                     {flats.length > 0 && flats.filter(flat => flat.isFavorite && flat.isVisible)
                         .map(flat => {
                             return <FlatItem key={flat.id} flat={flat}
-                                             handleEdit={(status, flat) => toggleFlat(status, flat, () => setReload(!reload))}/>})}
+                                             handleEdit={(status, flat) => toggleFlatData(status, flat, () => setReload(!reload))}/>})}
                 </div>
                 <h3 className='my-12 text-center'>Others:</h3>
                 <div className='flex items-cenetr justify-center flex-wrap gap-20'>
                     {flats.length > 0 && flats.filter(flat => !flat.isFavorite && flat.isVisible)
                         .map(flat => {
                             return <FlatItem key={flat.id} flat={flat}
-                                             handleEdit={(status, flat) => toggleFlat(status, flat, () => setReload(!reload))}/>})}
+                                             handleEdit={(status, flat) => toggleFlatData(status, flat, () => setReload(!reload))}/>})}
                 </div>
                 <div className="fixed bottom-6 right-6">
                     <div title='Add new flat' onClick={() => setIsFormPrepared(true)}>

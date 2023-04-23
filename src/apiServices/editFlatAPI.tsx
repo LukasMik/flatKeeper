@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {IFlat} from "../types.ts";
 
-export const useEditFlatAPI = async (flat: IFlat, onSuccess?: () => void) => {
+export const editFlatAPI = async (flat: IFlat, onSuccess?: () => void) => {
     try {
         await axios.put(`http://localhost:3000/flats/${flat.id}`, flat);
         onSuccess ? onSuccess() : null

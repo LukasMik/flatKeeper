@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {IFlat} from "../types.ts";
 
-export const useAddFlatAPI = async (flat: IFlat, onSuccess: () => void) => {
+export const addFlatAPI = async (flat: IFlat, onSuccess: () => void) => {
     try {
         await axios.post('http://localhost:3000/flats', flat);
         onSuccess()

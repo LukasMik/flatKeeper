@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {IFlat} from "../../types.ts";
-import {useFlatByIdAPI} from "../../hooks/useFlatByIdAPI.tsx";
+import {getFlatByIdAPI} from "../../apiServices/getFlatByIdAPI.tsx";
 import {
     AiFillHeart,
     AiOutlineHeart,
@@ -11,9 +11,9 @@ import {
     TbDiamond, TbSofa
 } from "react-icons/all";
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
-import {EditRequiresModal} from "../modals/EditRequiresModal.tsx";
+import {EditRequirementsModal} from "../modals/EditRequirementsModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
-import {toggleFlat} from "../../services/toggleFlat.ts";
+import {toggleFlatData} from "../../services/toggleFlatData.ts";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()
@@ -22,7 +22,7 @@ export const FlatDetailPage = () => {
     const [isEditFormPrepared, setIsEditFormPrepared] = useState<boolean>(false)
 
     useEffect(() => {
-        id ? useFlatByIdAPI(id).then(flat => setFlat(flat)) : null
+        id ? getFlatByIdAPI(id).then(flat => setFlat(flat)) : null
     }, [id, reload, isEditFormPrepared])
 
     if (!flat)
@@ -37,7 +37,7 @@ export const FlatDetailPage = () => {
                          className='w-full h-full object-cover rounded-3xl'/>
                     <div className='absolute top-6 right-6' title='Edit flat'>
                         <button
-                            onClick={() => toggleFlat('favourite', flat, () => setReload(!reload))}
+                            onClick={() => toggleFlatData('favourite', flat, () => setReload(!reload))}
                             className='block text-6xl hover:scale-110 transform transition-all mb-6'>
                             {flat.isFavorite ?
                                 <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :
@@ -45,7 +45,7 @@ export const FlatDetailPage = () => {
                             }
                         </button>
                         <button
-                            onClick={() => toggleFlat('delete', flat, () => setReload(!reload))}
+                            onClick={() => toggleFlatData('delete', flat, () => setReload(!reload))}
                             className='block text-6xl hover:scale-110 transform transition-all mb-6'>
                             {flat.isVisible ?
                                 <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
@@ -63,8 +63,8 @@ export const FlatDetailPage = () => {
                                 <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)} isFormPrepared={isEditFormPrepared}/>
                             </div>
                         </FlatContextProvider>
-                        <div title='Add requires'>
-                            <EditRequiresModal/>
+                        <div title='Add requirement'>
+                            <EditRequirementsModal/>
                         </div>
                     </div>
                     <div title='Add features'>

@@ -22,7 +22,7 @@
       "includeEnergies": false,
       "sentMessage": true,
       "hasAnswer": true,
-      "requires": []
+      "requirements": []
     },
     {
       "id": 2,
@@ -46,7 +46,7 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": []
+      "requirements": []
     },
     {
       "id": 3,
@@ -70,7 +70,7 @@
       "includeEnergies": false,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": [
+      "requirements": [
         {
           "id": 1,
           "severity": "required",
@@ -123,7 +123,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "id": 4,
       "isVisible": false
     },
@@ -147,7 +147,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 7
     },
@@ -171,7 +171,7 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "id": 8,
       "isVisible": false
     },
@@ -198,7 +198,7 @@
       "note": "notesss\nssssss nsdces dwaddwzsccscszsczsc",
       "id": 9,
       "isVisible": false,
-      "requires": [
+      "requirements": [
         {
           "id": 5,
           "severity": "required",
@@ -251,7 +251,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 10
     },
@@ -275,7 +275,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 11
     },
@@ -299,7 +299,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 12
     },
@@ -323,7 +323,7 @@
       "includeEnergies": false,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 13
     },
@@ -347,7 +347,7 @@
       "includeEnergies": false,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "id": 14,
       "isVisible": false
     },
@@ -371,7 +371,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 15
     },
@@ -395,7 +395,7 @@
       "includeEnergies": false,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "id": 16,
       "isVisible": false
     },
@@ -419,7 +419,7 @@
       "includeEnergies": true,
       "sentMessage": false,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "id": 17,
       "isVisible": true
     },
@@ -443,7 +443,7 @@
       "includeEnergies": false,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "id": 18,
       "isVisible": false
     },
@@ -467,7 +467,7 @@
       "includeEnergies": true,
       "sentMessage": true,
       "hasAnswer": false,
-      "requires": [],
+      "requirements": [],
       "isVisible": false,
       "id": 19
     },
@@ -493,7 +493,7 @@
       "hasAnswer": true,
       "note": "Prohlidka pondeli ve 14:00, \nDostupne od pulky cervence, \nZjistit pripojku na pracku a susicku, \nRozmer telky 140cm\n\nPotvrdit panovi v na 704 972 648",
       "id": 20,
-      "requires": [
+      "requirements": [
         {
           "id": 3,
           "severity": "required",
@@ -554,26 +554,16 @@
       "hasAnswer": false,
       "note": "5. patro bez vytahu, nejspis hluk z koleji, brutalni vyhled",
       "id": 21,
-      "requires": [
+      "requirements": [
         {
           "id": 1,
           "severity": "required",
           "name": "Mouse"
         },
         {
-          "id": 2,
-          "severity": "required",
-          "name": "Dryer"
-        },
-        {
           "id": 3,
           "severity": "required",
           "name": "Metro"
-        },
-        {
-          "id": 4,
-          "severity": "required",
-          "name": "Pantry"
         },
         {
           "id": 5,
@@ -614,6 +604,16 @@
           "id": 205,
           "severity": "bonus",
           "name": "City view"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
         }
       ],
       "isVisible": true
@@ -640,7 +640,7 @@
       "hasAnswer": false,
       "note": "Zjistit jestli energie jsou v cene najmu",
       "isVisible": true,
-      "requires": [],
+      "requirements": [],
       "id": 22
     },
     {
@@ -665,7 +665,7 @@
       "hasAnswer": false,
       "note": "4. patro bez vytahu",
       "isVisible": true,
-      "requires": [
+      "requirements": [
         {
           "id": 2,
           "severity": "required",

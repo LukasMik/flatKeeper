@@ -1,6 +1,6 @@
 import {Severity} from "../types.ts";
 
-export const requireColor = (severity: Severity) => {
+export const requirementsColor = (severity: Severity) => {
     if (severity === Severity.Required) {
         return 'text-red-500'
     } else if (severity === Severity.Optional) {

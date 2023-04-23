@@ -4,8 +4,8 @@ import {IFlat} from "../../types.ts";
 import {useFlatContext} from "../../contexts/flatContext.tsx";
 import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
-import {useAddFlatAPI} from '../../hooks/useAddFlatAPI.tsx'
-import {useEditFlatAPI} from "../../hooks/useEditFlatAPI.tsx";
+import {addFlatAPI} from '../../apiServices/addFlatAPI.tsx'
+import {editFlatAPI} from "../../apiServices/editFlatAPI.tsx";
 
 interface IProps {
     handleSuccess: () => void
@@ -44,11 +44,11 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
         if (Object.keys(flat).length > 0) {
             data.id = flat.id
             data.isVisible = flat.isVisible
-            data.requires = flat.requires
-            return useEditFlatAPI(data, handleSuccess)
+            data.requirements = flat.requirements
+            return editFlatAPI(data, handleSuccess)
         } else {
             data.isVisible = true
-            return useAddFlatAPI({...data, requires: []}, handleSuccess);
+            return addFlatAPI({...data, requirements: []}, handleSuccess);
         }
     }
 

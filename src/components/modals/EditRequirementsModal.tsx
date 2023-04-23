@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import {AiOutlinePlus, RxCross2} from "react-icons/all";
-import {RequirementsModalContent} from "../RequirementsModalContent.tsx";
+import {Requirements} from "../Requirements.tsx";
 
 export const EditRequirementsModal = () => {
     return (
@@ -18,7 +18,7 @@ export const EditRequirementsModal = () => {
                     <Dialog.Title className="text-mauve12 m-0 text-[17px] font-medium">
                         Edit requirements
                     </Dialog.Title>
-                    <RequirementsModalContent/>
+                    <Requirements/>
                     <Dialog.Close asChild>
                         <button
                             className="absolute top-4 right-4 border border-2 rounded-full p-1 group bg-black bg-opacity-10 hover:bg-opacity-20 transition-all "

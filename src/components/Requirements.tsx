@@ -6,7 +6,7 @@ import {FlatContextProvider} from "../contexts/flatContext.tsx";
 import {getFlatByIdAPI} from "../apiServices/getFlatByIdAPI.tsx";
 import {useParams} from "react-router-dom";
 
-export const RequirementsModalContent = () => {
+export const Requirements = () => {
     const {id} = useParams()
     const [flat, setFlat] = useState<IFlat | null>(null)
     const [reload, setReload] = useState<boolean>(false)

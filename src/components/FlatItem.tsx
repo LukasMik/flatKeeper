@@ -3,9 +3,9 @@ import {NavLink} from "react-router-dom";
 import '../styles/flatItem.scss'
 import {
     AiFillHeart, AiOutlineHeart,
-    AiOutlineLayout, BsPiggyBank, BsTrash3, BsTrash3Fill, FiMapPin,
+    AiOutlineLayout, BsTrash3, BsTrash3Fill, FiMapPin,
     IoResize,
-    MdOutlineEventAvailable, RiLuggageDepositLine,
+    MdOutlineEventAvailable, RiHandCoinLine, RiLuggageDepositLine,
     SiMetrodeparis, TbDiamond
 } from "react-icons/all";
 
@@ -65,7 +65,7 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                                 </li> : null}
                                 {flat.commission ?
                                     <li>
-                                        <BsPiggyBank/><span>Commission:</span><span>{Number(flat.commission).toLocaleString()} Kč</span>
+                                        <RiHandCoinLine/><span>Commission:</span><span>{Number(flat.commission).toLocaleString()} Kč</span>
                                     </li> : null
                                 }
                                 <li>

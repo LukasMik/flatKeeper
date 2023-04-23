@@ -36,8 +36,8 @@ export interface IFlatFeature {
 
 export enum Severity {
     Required = 'required',
-    Optional = 'optional',
-    Bonus = 'bonus'
+    NiceToHave = 'nice-to-have',
+    Disadvantage = 'disadvantage'
 }
 
 export enum FlatFeatureAction {

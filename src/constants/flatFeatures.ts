@@ -1,12 +1,12 @@
 import {
-    BsCodeSlash,
+    BsCodeSlash, BsFillMegaphoneFill,
     BsSnow,
-    FaBath, GiForkKnifeSpoon, GiRockingChair, GiVillage,
+    FaBath, FaWalking, GiForkKnifeSpoon, GiPiggyBank, GiRockingChair, GiVillage,
     GiWashingMachine, IoIosResize,
-    IoShirtOutline, MdOutlineKitchen, MdRoofing, RiParkingBoxFill,
-    SiMetrodeparis,
-    TbCarrot,
-    TbGrill, TbToiletPaper,
+    IoShirtOutline, MdOutlineKitchen, MdRoofing, RiHandCoinLine, RiParkingBoxFill,
+    SiMetrodeparis, TbBuildingSkyscraper,
+    TbCarrot, TbElevatorOff,
+    TbGrill, TbMouseOff, TbTarget, TbToiletPaper,
     VscSquirrel
 } from "react-icons/all";
 import {IFlatFeature} from "../types.ts";
@@ -53,54 +53,94 @@ export const ALLFLATFEATURES: IFlatFeature[] = [
         severity: 'required',
         name: 'Dishwasher',
         icon: GiForkKnifeSpoon,
-    },
-// Optional
-    {
-        id: 101,
-        severity: 'optional',
+    }, {
+        id: 10,
+        severity: 'required',
         name: 'Terrace',
         icon: TbGrill
-    }, {
-        id: 102,
-        severity: 'optional',
-        name: 'Separate toilet',
-        icon: TbToiletPaper,
-    }, {
-        id: 103,
-        severity: 'optional',
-        name: '<50 m2',
-        icon: IoIosResize,
     },
-// Bonus
+// Nice to have
     {
-        id: 201,
-        severity: 'bonus',
+        id: 101,
+        severity: 'nice-to-have',
         name: 'Bathtub',
         icon: FaBath,
     }, {
-        id: 202,
-        severity: 'bonus',
+        id: 102,
+        severity: 'nice-to-have',
         name: 'Maisonette',
         icon: MdRoofing,
     }, {
-        id: 203,
-        severity: 'bonus',
+        id: 103,
+        severity: 'nice-to-have',
         name: 'Air conditioning',
         icon: BsSnow,
     }, {
-        id: 204,
-        severity: 'bonus',
+        id: 104,
+        severity: 'nice-to-have',
         name: 'Parking',
         icon: RiParkingBoxFill,
     }, {
-        id: 205,
-        severity: 'bonus',
+        id: 105,
+        severity: 'nice-to-have',
         name: 'City view',
         icon: GiVillage,
     }, {
-        id: 206,
-        severity: 'bonus',
+        id: 106,
+        severity: 'nice-to-have',
         name: 'Work room',
         icon: BsCodeSlash,
+    }, {
+        id: 107,
+        severity: 'nice-to-have',
+        name: 'Separate toilet',
+        icon: TbToiletPaper,
+    }, {
+        id: 108,
+        severity: 'nice-to-have',
+        name: '<50 m2',
+        icon: IoIosResize,
+    }, {
+        id: 109,
+        severity: 'nice-to-have',
+        name: 'Near to city center',
+        icon: TbTarget,
+    }, {
+        id: 110,
+        severity: 'nice-to-have',
+        name: 'Residence',
+        icon: TbBuildingSkyscraper,
     },
+//     Disadvantages
+    {
+        id: 201,
+        severity: 'disadvantage',
+        name: 'No elevator',
+        icon: TbElevatorOff,
+    }, {
+        id: 202,
+        severity: 'disadvantage',
+        name: 'Commission',
+        icon: RiHandCoinLine,
+    }, {
+        id: 203,
+        severity: 'disadvantage',
+        name: 'Noise',
+        icon: BsFillMegaphoneFill,
+    }, {
+        id: 204,
+        severity: 'disadvantage',
+        name: 'No metro',
+        icon: FaWalking,
+    }, {
+        id: 205,
+        severity: 'disadvantage',
+        name: 'No pet',
+        icon: TbMouseOff,
+    }, {
+        id: 206,
+        severity: 'disadvantage',
+        name: 'High deposit',
+        icon: GiPiggyBank,
+    }
 ]

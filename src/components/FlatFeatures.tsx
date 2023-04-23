@@ -25,9 +25,9 @@ export const FlatFeatures = () => {
                 <div className="w-2/3">
                     <FlatFeaturesAvailable severity={Severity.Required}
                                            onSuccess={() => setReload(!reload)}/>
-                    <FlatFeaturesAvailable severity={Severity.Optional}
+                    <FlatFeaturesAvailable severity={Severity.NiceToHave}
                                            onSuccess={() => setReload(!reload)}/>
-                    <FlatFeaturesAvailable severity={Severity.Bonus}
+                    <FlatFeaturesAvailable severity={Severity.Disadvantage}
                                            onSuccess={() => setReload(!reload)}/>
                 </div>
                 <div className="w-1/3">
@@ -36,10 +36,10 @@ export const FlatFeatures = () => {
                         <FlatFeaturesUsed severity={Severity.Required}
                                           flatFeatures={flat.features}
                                           onSuccess={() => setReload(!reload)}/>
-                        <FlatFeaturesUsed severity={Severity.Optional}
+                        <FlatFeaturesUsed severity={Severity.NiceToHave}
                                           flatFeatures={flat.features}
                                           onSuccess={() => setReload(!reload)}/>
-                        <FlatFeaturesUsed severity={Severity.Bonus}
+                        <FlatFeaturesUsed severity={Severity.Disadvantage}
                                           flatFeatures={flat.features}
                                           onSuccess={() => setReload(!reload)}/>
                     </div>

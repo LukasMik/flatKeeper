@@ -97,8 +97,8 @@
           "name": "Dishwasher"
         },
         {
-          "id": 101,
-          "severity": "optional",
+          "id": 10,
+          "severity": "required",
           "name": "Terrace"
         }
       ]
@@ -205,23 +205,23 @@
           "name": "Storage space"
         },
         {
-          "id": 103,
-          "severity": "optional",
+          "id": 108,
+          "severity": "nice-to-have",
           "name": "<50 m2"
         },
         {
-          "id": 205,
-          "severity": "bonus",
+          "id": 105,
+          "severity": "nice-to-have",
           "name": "City view"
         },
         {
-          "id": 203,
-          "severity": "bonus",
+          "id": 103,
+          "severity": "nice-to-have",
           "name": "Air conditioning"
         },
         {
-          "id": 204,
-          "severity": "bonus",
+          "id": 104,
+          "severity": "nice-to-have",
           "name": "Parking"
         },
         {
@@ -515,19 +515,39 @@
           "name": "Dishwasher"
         },
         {
-          "id": 101,
-          "severity": "optional",
+          "id": 10,
+          "severity": "required",
           "name": "Terrace"
         },
         {
-          "id": 204,
-          "severity": "bonus",
+          "id": 104,
+          "severity": "nice-to-have",
           "name": "Parking"
         },
         {
-          "id": 205,
-          "severity": "bonus",
+          "id": 105,
+          "severity": "nice-to-have",
           "name": "City view"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 203,
+          "severity": "disadvantage",
+          "name": "Noise"
+        },
+        {
+          "id": 109,
+          "severity": "nice-to-have",
+          "name": "Near to city center"
+        },
+        {
+          "id": 110,
+          "severity": "nice-to-have",
+          "name": "Residence"
         }
       ],
       "isVisible": true
@@ -586,23 +606,23 @@
           "name": "Dishwasher"
         },
         {
-          "id": 101,
-          "severity": "optional",
+          "id": 10,
+          "severity": "required",
           "name": "Terrace"
         },
         {
-          "id": 102,
-          "severity": "optional",
+          "id": 107,
+          "severity": "nice-to-have",
           "name": "Separate toilet"
         },
         {
-          "id": 103,
-          "severity": "optional",
+          "id": 108,
+          "severity": "nice-to-have",
           "name": "<50 m2"
         },
         {
-          "id": 205,
-          "severity": "bonus",
+          "id": 105,
+          "severity": "nice-to-have",
           "name": "City view"
         },
         {
@@ -614,6 +634,21 @@
           "id": 4,
           "severity": "required",
           "name": "Pantry"
+        },
+        {
+          "id": 203,
+          "severity": "disadvantage",
+          "name": "Noise"
+        },
+        {
+          "id": 201,
+          "severity": "disadvantage",
+          "name": "No elevator"
+        },
+        {
+          "id": 206,
+          "severity": "disadvantage",
+          "name": "High deposit"
         }
       ],
       "isVisible": true
@@ -697,28 +732,28 @@
           "name": "Dishwasher"
         },
         {
-          "id": 101,
-          "severity": "optional",
+          "id": 10,
+          "severity": "required",
           "name": "Terrace"
         },
         {
-          "id": 102,
-          "severity": "optional",
+          "id": 107,
+          "severity": "nice-to-have",
           "name": "Separate toilet"
         },
         {
-          "id": 201,
-          "severity": "bonus",
+          "id": 101,
+          "severity": "nice-to-have",
           "name": "Bathtub"
         },
         {
-          "id": 203,
-          "severity": "bonus",
+          "id": 103,
+          "severity": "nice-to-have",
           "name": "Air conditioning"
         },
         {
-          "id": 103,
-          "severity": "optional",
+          "id": 108,
+          "severity": "nice-to-have",
           "name": "<50 m2"
         }
       ],

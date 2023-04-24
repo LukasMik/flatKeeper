@@ -1,5 +1,5 @@
 import {flatFeaturesColor} from "../services/flatFeaturesColor.ts";
-import {IFlat, IFlatFeature, FlatFeatureAction, Severity} from "../types.ts";
+import {ColorStatus, FlatFeatureAction, IFlat, IFlatFeature, Severity} from "../types.ts";
 import {useFlatContext} from "../contexts/flatContext.tsx";
 import {editFlatFeaturesAPI} from "../apiServices/editFlatFeaturesAPI.tsx";
 
@@ -20,7 +20,7 @@ export const FlatFeatureItem = ({flatFeature, isUsed, onSuccess, flatFeatureActi
 
     return (
         <div
-            className={`text-3xl mb-4 flex flex-col items-center hover:scale-125 transition-all transform cursor-pointer ${disabled} ${flatFeaturesColor(flatFeature.severity as Severity)}`}
+            className={`text-3xl mb-4 flex flex-col items-center hover:scale-125 transition-all transform cursor-pointer ${disabled} ${flatFeaturesColor(flatFeature.severity as Severity, ColorStatus.TextClass)}`}
             key={flatFeature.id}>
             <flatFeature.icon title={flatFeature.name}
                               onClick={() => handleOnClick(flat, flatFeature)}/>

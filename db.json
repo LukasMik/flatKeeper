@@ -4,12 +4,12 @@
       "id": 1,
       "name": "Maisonette terace Nusle",
       "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/98530-nabidka-pronajem-bytu-sezimova",
-      "isVisible": false,
+      "isVisible": true,
       "size": 100,
       "layout": "2+kk",
       "photo": "https://api.bezrealitky.cz/media/cache/record_main/data/images/advert/98k/98530/1681205773-fdlhmosdjt-phpyojxi4.jpg",
       "prettyScore": 9,
-      "isFavorite": true,
+      "isFavorite": false,
       "metroDistance": 11,
       "distanceToInfinit": 23,
       "distanceToSmartlook": 33,
@@ -22,7 +22,73 @@
       "includeEnergies": false,
       "sentMessage": true,
       "hasAnswer": true,
-      "features": []
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 105,
+          "severity": "nice-to-have",
+          "name": "City view"
+        },
+        {
+          "id": 106,
+          "severity": "nice-to-have",
+          "name": "Work room"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        },
+        {
+          "id": 109,
+          "severity": "nice-to-have",
+          "name": "Near to city center"
+        }
+      ]
     },
     {
       "id": 2,
@@ -100,6 +166,16 @@
           "id": 10,
           "severity": "required",
           "name": "Terrace"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 204,
+          "severity": "disadvantage",
+          "name": "No metro"
         }
       ]
     },
@@ -220,14 +296,69 @@
           "name": "Air conditioning"
         },
         {
-          "id": 104,
-          "severity": "nice-to-have",
-          "name": "Parking"
-        },
-        {
           "id": 9,
           "severity": "required",
           "name": "Dishwasher"
+        },
+        {
+          "id": 110,
+          "severity": "nice-to-have",
+          "name": "Residence"
+        },
+        {
+          "id": 109,
+          "severity": "nice-to-have",
+          "name": "Near to city center"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 205,
+          "severity": "disadvantage",
+          "name": "No pet"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 201,
+          "severity": "disadvantage",
+          "name": "No elevator"
         }
       ]
     },
@@ -692,13 +823,14 @@
       "equipped": false,
       "district": "Vinohrady",
       "availableFrom": "June",
-      "price": "22000",
+      "sentMessage": true,
+      "price": "21000",
       "deposit": "22000",
       "commission": null,
       "includeEnergies": false,
-      "sentMessage": true,
       "hasAnswer": false,
       "note": "4. patro bez vytahu",
+      "id": 23,
       "isVisible": true,
       "features": [
         {
@@ -755,9 +887,23 @@
           "id": 108,
           "severity": "nice-to-have",
           "name": "<50 m2"
+        },
+        {
+          "id": 201,
+          "severity": "disadvantage",
+          "name": "No elevator"
+        },
+        {
+          "id": 105,
+          "severity": "nice-to-have",
+          "name": "City view"
+        },
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
         }
-      ],
-      "id": 23
+      ]
     }
   ]
 }

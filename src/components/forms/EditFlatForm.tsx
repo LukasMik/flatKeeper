@@ -200,7 +200,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                     </div>
                 </div>
                 <div className="flex justify-center">
-                    <div className="w-1/2">
+                    <div className="w-full">
                         <label htmlFor="note" className="text-xl block text-center">Note</label>
                         <textarea rows={4} id="note" {...register('note')}
                                className='input-styles h-24'/>

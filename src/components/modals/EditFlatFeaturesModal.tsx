@@ -1,15 +1,28 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import {AiOutlinePlus, RxCross2} from "react-icons/all";
+import {RxCross2} from "react-icons/all";
 import {FlatFeatures} from "../FlatFeatures.tsx";
+import {FlatFeaturesRing} from "../FlatFeaturesRing.tsx";
+import {Severity} from "../../types.ts";
 
-export const EditFlatFeaturesModal = () => {
+interface IProps {
+    onOpenChange: () => void
+}
+
+export const EditFlatFeaturesModal = ({onOpenChange}: IProps) => {
     return (
-        <Dialog.Root>
+        <Dialog.Root onOpenChange={onOpenChange}>
             <Dialog.Trigger asChild>
-                <button
-                    className="h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">
-                    <AiOutlinePlus className='text-gray-100 text-4xl'/>
-                </button>
+                <div className="gap-8 flex items-center justify-around mt-4 ml-20 cursor-pointer">
+                    <div className="hover:scale-110 transform transition-all">
+                        <FlatFeaturesRing severity={Severity.Required}/>
+                    </div>
+                    <div className="hover:scale-110 transform transition-all">
+                        <FlatFeaturesRing severity={Severity.NiceToHave}/>
+                    </div>
+                    <div className="hover:scale-110 transform transition-all">
+                        <FlatFeaturesRing severity={Severity.Disadvantage}/>
+                    </div>
+                </div>
             </Dialog.Trigger>
             <Dialog.Portal>
                 <Dialog.Overlay className="bg-blackA9 data-[state=open]:animate-overlayShow fixed inset-0"/>

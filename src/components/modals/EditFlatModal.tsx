@@ -15,10 +15,6 @@ export const EditFlatModal = ({status, onOpenChange, isFormPrepared}: IStatus) =
            isFormPrepared ? setFormSuccess(false) : null
     }, [isFormPrepared]);
 
-
-    const handleOpenChange = () => {
-        onOpenChange()
-    }
     const dialogContent = () => {
         if (formSuccess && status === 'new') {
             return <p className="text-3xl text-center py-24">Flat has been successfully added!</p>
@@ -30,7 +26,7 @@ export const EditFlatModal = ({status, onOpenChange, isFormPrepared}: IStatus) =
     }
 
     return (
-        <Dialog.Root onOpenChange={handleOpenChange}>
+        <Dialog.Root onOpenChange={onOpenChange}>
             <Dialog.Trigger asChild>
                 <button
                     className="h-16 w-16 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-2xl tranform hover:scale-110 transition-all">

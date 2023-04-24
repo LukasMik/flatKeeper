@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {IFlat} from "../../types.ts";
+import {IFlat, Severity} from "../../types.ts";
 import {getFlatByIdAPI} from "../../apiServices/getFlatByIdAPI.tsx";
 import {
     AiFillHeart,
@@ -14,6 +14,7 @@ import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 import {EditFlatFeaturesModal} from "../modals/EditFlatFeaturesModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
 import {toggleFlatData} from "../../services/toggleFlatData.ts";
+import {FlatFeaturesRing} from "../FlatFeaturesRing.tsx";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()
@@ -30,7 +31,6 @@ export const FlatDetailPage = () => {
 
     if (id)
         return (
-
             <div className='w-3/5 mx-auto'>
                 <div className='h-hFlatDetail relative relative'>
                     <img src={flat.photo} alt="flat-image"
@@ -53,21 +53,25 @@ export const FlatDetailPage = () => {
                             }
                         </button>
                     </div>
-                    <div className='absolute bottom-6 left-6 flex items-center gap-4 text-gray-100 text-5xl'>
-                        <TbDiamond className='drop-shadow-lg'/>
-                        <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
-                    </div>
-                    <div className="absolute bottom-6 right-6 flex flex-col gap-4">
-                        <FlatContextProvider flat={flat}>
-                            <div title='Edit flat' onClick={() => setIsEditFormPrepared(true)}>
-                                <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)} isFormPrepared={isEditFormPrepared}/>
+                    <div className="absolute bottom-6 flex items-end justify-between px-8 w-full gap-8">
+                        <div
+                            className='flex items-end justify-between gap-4 text-gray-100 text-5xl w-1/4'>
+                            <div className='flex items-center gap-4'>
+                                <TbDiamond className='drop-shadow-lg'/>
+                                <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
                             </div>
-                        </FlatContextProvider>
-                        <div title='Add feature'>
-                            <EditFlatFeaturesModal/>
                         </div>
-                    </div>
-                    <div title='Add features'>
+                        <div title='Add feature' className='w-1/2'>
+                            <FlatContextProvider flat={flat}>
+                                <EditFlatFeaturesModal onOpenChange={() => setReload(!reload)}/>
+                            </FlatContextProvider>
+                        </div>
+                        <div title='Edit flat' onClick={() => setIsEditFormPrepared(true)} className='w-1/4 flex justify-end'>
+                            <FlatContextProvider flat={flat}>
+                                <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)}
+                                               isFormPrepared={isEditFormPrepared}/>
+                            </FlatContextProvider>
+                        </div>
                     </div>
                 </div>
                 <div className="flex justify-between p-6">
@@ -160,6 +164,8 @@ export const FlatDetailPage = () => {
                 </div>
                 {flat.note && <p className='text-xl ml-6'><strong>Note: </strong><br/>{flat.note}</p>}
             </div>
-
         )
+    else {
+        return null
+    }
 }

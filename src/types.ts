@@ -44,3 +44,9 @@ export enum FlatFeatureAction {
     Remove = 'remove',
     Add = 'add'
 }
+
+export enum ColorStatus {
+    TextClass = 'text-class',
+    Hex = 'hex',
+    BgClass = 'bg-class'
+}

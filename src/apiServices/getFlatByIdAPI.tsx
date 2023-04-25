@@ -1,8 +1,9 @@
 import axios from "axios";
 import {IFlat} from "../types.ts";
+import {LOCALIPV4} from "../constants/general.ts";
 
 export const getFlatByIdAPI = async (id: string | number): Promise<IFlat | null> => {
-    return await axios.get<IFlat>(`http://localhost:3000/flats/${id.toString()}`)
+    return await axios.get<IFlat>(`http://${LOCALIPV4}:3000/flats/${id}`)
         .then(res => {
             return res.data
         })

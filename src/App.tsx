@@ -5,7 +5,6 @@ import {ListPage} from "./components/pages/List.page.tsx";
 import {FlatDetailPage} from "./components/pages/FlatDetail.page.tsx";
 
 export const App = () => {
-
     return (
         <Router>
             <Navigation/>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import {IFlat, IFlatFeature, FlatFeatureAction} from "../types.ts";
 import React from "react";
+import {LOCALIPV4} from "../constants/general.ts";
 
 export const editFlatFeaturesAPI = async (
     flat: IFlat,
@@ -18,7 +19,7 @@ export const editFlatFeaturesAPI = async (
     }
 
     try {
-        await axios.put(`http://localhost:3000/flats/${flat.id}`, updatedData());
+        await axios.put(`http://${LOCALIPV4}:3000/flats/${flat.id}`, updatedData());
         onSuccess();
     } catch (error) {
         console.error(error);

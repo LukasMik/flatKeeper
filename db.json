@@ -176,6 +176,11 @@
           "id": 204,
           "severity": "disadvantage",
           "name": "No metro"
+        },
+        {
+          "id": 111,
+          "severity": "nice-to-have",
+          "name": "External blinds"
         }
       ]
     },
@@ -359,6 +364,11 @@
           "id": 201,
           "severity": "disadvantage",
           "name": "No elevator"
+        },
+        {
+          "id": 204,
+          "severity": "disadvantage",
+          "name": "No metro"
         }
       ]
     },
@@ -609,7 +619,7 @@
       "layout": "2+kk",
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QK_Jk/cGqnYg.jpeg?fl=res,1920,1080,1|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
       "prettyScore": "8",
-      "isFavorite": true,
+      "isFavorite": false,
       "metroDistance": "15",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -824,11 +834,11 @@
       "district": "Vinohrady",
       "availableFrom": "June",
       "sentMessage": true,
-      "price": "21000",
+      "price": "23000",
       "deposit": "22000",
       "commission": null,
       "includeEnergies": false,
-      "hasAnswer": false,
+      "hasAnswer": true,
       "note": "4. patro bez vytahu",
       "id": 23,
       "isVisible": true,

@@ -1,9 +1,9 @@
 import {
-    BsCodeSlash, BsFillMegaphoneFill,
+    BsCodeSlash, BsFillMegaphoneFill, BsShop,
     BsSnow,
     FaBath, FaWalking, GiForkKnifeSpoon, GiPiggyBank, GiRockingChair, GiVillage,
     GiWashingMachine, IoIosResize,
-    IoShirtOutline, MdOutlineKitchen, MdRoofing, RiHandCoinLine, RiParkingBoxFill,
+    IoShirtOutline, MdBlinds, MdOutlineKitchen, MdRoofing, RiHandCoinLine, RiParkingBoxFill,
     SiMetrodeparis, TbBuildingSkyscraper,
     TbCarrot, TbElevatorOff,
     TbGrill, TbMouseOff, TbTarget, TbToiletPaper,
@@ -110,6 +110,16 @@ export const ALLFLATFEATURES: IFlatFeature[] = [
         severity: 'nice-to-have',
         name: 'Residence',
         icon: TbBuildingSkyscraper,
+    }, {
+        id: 111,
+        severity: 'nice-to-have',
+        name: 'External blinds',
+        icon: MdBlinds,
+    }, {
+        id: 112,
+        severity: 'nice-to-have',
+        name: 'Mall',
+        icon: BsShop,
     },
 //     Disadvantages
     {

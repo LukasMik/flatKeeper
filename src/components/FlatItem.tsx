@@ -8,7 +8,7 @@ import {
     BsTrash3,
     BsTrash3Fill,
     FiMapPin,
-    IoResize,
+    IoResize, MdDateRange,
     MdOutlineEventAvailable,
     RiHandCoinLine,
     RiLuggageDepositLine,
@@ -61,9 +61,11 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                             </div>
                             <div className="hidden-content">
                                 <ul>
+                                    {flat.metroDistance ?
                                     <li>
-                                        <SiMetrodeparis/><span>Metro distance:</span><span>{flat.metroDistance ? `${flat.metroDistance} min walk` : 'No data'}</span>
-                                    </li>
+                                        <SiMetrodeparis/><span>Metro distance:</span><span>{`${flat.metroDistance} min walk`}</span>
+                                    </li> : null
+                                    }
                                     <li>
                                         <FiMapPin/><span>District:</span><span>{flat.district}</span>
                                     </li>
@@ -79,6 +81,11 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                                     <li>
                                         <MdOutlineEventAvailable/><span>Available from:</span><span>{flat.availableFrom}</span>
                                     </li>
+                                    {flat.addAt ?
+                                        <li>
+                                            <MdDateRange/><span>Add at:</span><span>{new Date(flat.addAt).toLocaleDateString()}</span>
+                                        </li> : null
+                                    }
                                 </ul>
                             </div>
                         </div>

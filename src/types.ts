@@ -25,6 +25,8 @@ export interface IFlat {
     hasAnswer: boolean
     features: IFlatFeature[]
     note: string
+    addAt: Date
+    lastEditAt: Date
 }
 
 export interface IFlatFeature {

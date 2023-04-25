@@ -14,7 +14,7 @@ export const FlatFeaturesAvailable = ({severity, onSuccess}: IProps) => {
         return (
             <>
                 <p className="text-2xl mb-4">{severity.charAt(0).toUpperCase() + severity.slice(1)}</p>
-                <div className="flex gap-4 mb-4">
+                <div className="flex gap-4 mb-4 flex-wrap">
                     {ALLFLATFEATURES.map((r: IFlatFeature) => {
                         const isUsed = flat.features.some(req => req.id === r.id)
                         if (r.severity === severity) {

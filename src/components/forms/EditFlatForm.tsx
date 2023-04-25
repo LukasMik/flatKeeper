@@ -40,15 +40,24 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
     const {register, handleSubmit, formState} = form
     const {errors} = formState
 
+    const now = new Date()
+
     const onSubmit = (data: IFlat) => {
         if (Object.keys(flat).length > 0) {
             data.id = flat.id
             data.isVisible = flat.isVisible
             data.features = flat.features
+            data.addAt = flat.addAt
+            data.lastEditAt = now
             return editFlatAPI(data, handleSuccess)
         } else {
             data.isVisible = true
-            return addFlatAPI({...data, features: []}, handleSuccess);
+            return addFlatAPI({
+                ...data,
+                features: [],
+                addAt: now,
+                lastEditAt: now
+            }, handleSuccess);
         }
     }
 
@@ -75,7 +84,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                     <div className=" w-1/3 relative">
                         <label htmlFor="photo">Photo*</label>
                         <input type="text" id="photo"
-                               placeholder='https://www.bezrealitky.cz/nemovitosti-byty-domy/689954-nabidka-pronajem-bytu-drahobejlova-hlavni-mesto-praha'
+                               placeholder='Right click + copy image address'
                                className="input-styles" {...register('photo')}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.photo?.message}</p>
                     </div>
@@ -203,7 +212,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                     <div className="w-full">
                         <label htmlFor="note" className="text-xl block text-center">Note</label>
                         <textarea rows={4} id="note" {...register('note')}
-                               className='input-styles h-24'/>
+                                  className='input-styles h-24'/>
                     </div>
                 </div>
                 <button

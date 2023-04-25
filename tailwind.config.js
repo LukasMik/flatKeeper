@@ -9,7 +9,7 @@ export default {
     extend: {
       spacing: {
         'wFlatItem': '28rem',
-        'hFlatItem': '31rem',
+        'hFlatItem': '33rem',
         'hFlatDetail': '40rem',
       },
       colors: {

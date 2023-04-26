@@ -18,11 +18,11 @@ export const HomePage = () => {
     if (useLocation().pathname === '/history') {
         return (
             <>
-                <h3 className='mb-12 text-center'>History:</h3>
+                <h3 className='mb-12 ml-12'>History:</h3>
                 <div className='flex items-cenetr justify-center flex-wrap gap-20'>
                     {flats.length > 0 && flats.filter(flat => !flat.isVisible)
-                        .sort((a, b) => new Date(b.lastEditAt).getDate() - new Date(a.lastEditAt).getDate())
-                        .sort((a, b) => new Date(b.lastEditAt).getTime() - new Date(a.lastEditAt).getTime())
+                        .sort((a, b) => new Date(b.addAt).getDate() - new Date(a.addAt).getDate())
+                        .sort((a, b) => new Date(b.addAt).getTime() - new Date(a.addAt).getTime())
                         .map(flat => <FlatItem key={flat.id} flat={flat}
                                                handleEdit={(status, flat) => toggleFlatData(status, flat, () => setReload(!reload))}/>)}
                 </div>
@@ -31,21 +31,21 @@ export const HomePage = () => {
     } else {
         return (
             <>
-                <h3 className='mb-12 text-center'>Favourites:</h3>
+                <h3 className='mb-12 ml-12'>Favourites:</h3>
                 <div className='flex items-cenetr justify-center flex-wrap gap-20'>
                     {flats.length > 0 && flats.filter(flat => flat.isFavorite && flat.isVisible)
-                        .sort((a, b) => new Date(b.lastEditAt).getDate() - new Date(a.lastEditAt).getDate())
-                        .sort((a, b) => new Date(b.lastEditAt).getTime() - new Date(a.lastEditAt).getTime())
+                        .sort((a, b) => new Date(b.addAt).getDate() - new Date(a.addAt).getDate())
+                        .sort((a, b) => new Date(b.addAt).getTime() - new Date(a.addAt).getTime())
                         .map(flat => {
                             return <FlatItem key={flat.id} flat={flat}
                                              handleEdit={(status, flat) => toggleFlatData(status, flat, () => setReload(!reload))}/>
                         })}
                 </div>
-                <h3 className='my-12 text-center'>Others:</h3>
+                <h3 className='my-12 ml-12'>Others:</h3>
                 <div className='flex items-cenetr justify-center flex-wrap gap-20'>
                     {flats.length > 0 && flats.filter(flat => !flat.isFavorite && flat.isVisible)
-                        .sort((a, b) => new Date(b.lastEditAt).getDate() - new Date(a.lastEditAt).getDate())
-                        .sort((a, b) => new Date(b.lastEditAt).getTime() - new Date(a.lastEditAt).getTime())
+                        .sort((a, b) => new Date(b.addAt).getDate() - new Date(a.addAt).getDate())
+                        .sort((a, b) => new Date(b.addAt).getTime() - new Date(a.addAt).getTime())
                         .map(flat => {
                             return <FlatItem key={flat.id} flat={flat}
                                              handleEdit={(status, flat) => toggleFlatData(status, flat, () => setReload(!reload))}/>

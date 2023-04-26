@@ -1,1 +1,1 @@
-export const LOCALIPV4: string = '192.168.100.7'
+export const LOCALIPV4: string = '192.168.100.22'

@@ -277,7 +277,7 @@
       "prettyScore": "2",
       "isFavorite": false,
       "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "lastEditAt": "2023-04-25T16:05:20.432Z",
       "metroDistance": null,
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -295,56 +295,6 @@
       "isVisible": false,
       "features": [
         {
-          "id": 5,
-          "severity": "required",
-          "name": "Storage space"
-        },
-        {
-          "id": 108,
-          "severity": "nice-to-have",
-          "name": "<50 m2"
-        },
-        {
-          "id": 105,
-          "severity": "nice-to-have",
-          "name": "City view"
-        },
-        {
-          "id": 103,
-          "severity": "nice-to-have",
-          "name": "Air conditioning"
-        },
-        {
-          "id": 9,
-          "severity": "required",
-          "name": "Dishwasher"
-        },
-        {
-          "id": 110,
-          "severity": "nice-to-have",
-          "name": "Residence"
-        },
-        {
-          "id": 109,
-          "severity": "nice-to-have",
-          "name": "Near to city center"
-        },
-        {
-          "id": 107,
-          "severity": "nice-to-have",
-          "name": "Separate toilet"
-        },
-        {
-          "id": 102,
-          "severity": "nice-to-have",
-          "name": "Maisonette"
-        },
-        {
-          "id": 101,
-          "severity": "nice-to-have",
-          "name": "Bathtub"
-        },
-        {
           "id": 1,
           "severity": "required",
           "name": "Mouse"
@@ -355,9 +305,29 @@
           "name": "Dryer"
         },
         {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
           "id": 8,
           "severity": "required",
           "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
         },
         {
           "id": 10,
@@ -365,9 +335,19 @@
           "name": "Terrace"
         },
         {
-          "id": 205,
-          "severity": "disadvantage",
-          "name": "No pet"
+          "id": 106,
+          "severity": "nice-to-have",
+          "name": "Work room"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
         },
         {
           "id": 202,
@@ -375,14 +355,19 @@
           "name": "Commission"
         },
         {
+          "id": 206,
+          "severity": "disadvantage",
+          "name": "High deposit"
+        },
+        {
+          "id": 203,
+          "severity": "disadvantage",
+          "name": "Noise"
+        },
+        {
           "id": 201,
           "severity": "disadvantage",
           "name": "No elevator"
-        },
-        {
-          "id": 204,
-          "severity": "disadvantage",
-          "name": "No metro"
         }
       ]
     },
@@ -643,7 +628,7 @@
       "sentMessage": true,
       "hasAnswer": false,
       "features": [],
-      "isVisible": false,
+      "isVisible": true,
       "id": 19
     },
     {
@@ -865,10 +850,8 @@
       "size": "72",
       "layout": "2+kk",
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F640k%2F640631%2F1606229371-uxianwsxav.jpg&w=750&q=75",
-      "prettyScore": "7",
+      "prettyScore": "8",
       "isFavorite": true,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "8",
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -881,7 +864,7 @@
       "commission": null,
       "includeEnergies": false,
       "hasAnswer": true,
-      "note": "4. patro bez vytahu",
+      "note": "4. patro bez vytahu, Kratka 3,  nedele 13h",
       "id": 23,
       "isVisible": true,
       "features": [
@@ -955,7 +938,9 @@
           "severity": "required",
           "name": "Mouse"
         }
-      ]
+      ],
+      "addAt": "",
+      "lastEditAt": "2023-04-26T12:29:55.374Z"
     },
     {
       "name": "OC EDEN",
@@ -966,7 +951,7 @@
       "prettyScore": "8",
       "isFavorite": false,
       "addAt": "2023-04-25T13:19:30.552Z",
-      "lastEditAt": "2023-04-25T14:10:07.819Z",
+      "lastEditAt": "2023-04-25T16:01:19.512Z",
       "metroDistance": "18",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -981,7 +966,43 @@
       "hasAnswer": false,
       "note": null,
       "isVisible": true,
-      "features": [],
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        },
+        {
+          "id": 112,
+          "severity": "nice-to-have",
+          "name": "Mall"
+        }
+      ],
       "id": 24
     },
     {
@@ -1094,10 +1115,1077 @@
       "hasAnswer": false,
       "note": null,
       "isVisible": true,
-      "features": [],
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 104,
+          "severity": "nice-to-have",
+          "name": "Parking"
+        }
+      ],
       "addAt": "2023-04-25T14:18:02.612Z",
-      "lastEditAt": "2023-04-25T14:18:02.612Z",
+      "lastEditAt": "2023-04-25T14:23:44.453Z",
       "id": 26
+    },
+    {
+      "name": "Moderni sidliste",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-stodulky-namesti-junkovych/1510151244#img=0",
+      "size": "57",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QL_J2/godo2k.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "7",
+      "isFavorite": false,
+      "metroDistance": "2",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Stodůlky",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "21000",
+      "deposit": "25000",
+      "commission": "17950",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": null,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 205,
+          "severity": "disadvantage",
+          "name": "No pet"
+        }
+      ],
+      "addAt": "2023-04-25T14:26:45.543Z",
+      "lastEditAt": "2023-04-25T14:38:53.783Z",
+      "id": 27
+    },
+    {
+      "name": "Obri obyvak a kuchyn",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-strasnice-nad-primaskou/2335048780#img=0",
+      "size": "78",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QI_Jf/YNQBfx0.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "3",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Strašnice",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "21000",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "",
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 201,
+          "severity": "disadvantage",
+          "name": "No elevator"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 205,
+          "severity": "disadvantage",
+          "name": "No pet"
+        }
+      ],
+      "addAt": "2023-04-25T14:46:01.977Z",
+      "lastEditAt": "2023-04-25T14:48:12.710Z",
+      "id": 28
+    },
+    {
+      "name": "Taborska Nusle",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-nusle-taborska/714937420#img=9",
+      "size": "75",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QN_J3/KuPjm8.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "15",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Nusle",
+      "availableFrom": "July",
+      "sentMessage": false,
+      "price": "15000",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "Pronajima asi mesto, cena se bude soutezit\n",
+      "id": 29,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        }
+      ],
+      "addAt": "2023-04-25T14:54:27.398Z",
+      "lastEditAt": "2023-04-25T15:47:46.023Z"
+    },
+    {
+      "name": "Novostavba Tulipa City",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-vysocany-moravcovych/2211779660#img=2",
+      "size": "60",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QI_Jf/xdaBHcp.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "7",
+      "isFavorite": false,
+      "metroDistance": "5",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Vysočany",
+      "availableFrom": "July",
+      "sentMessage": false,
+      "price": "21500",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "",
+      "id": 30,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 105,
+          "severity": "nice-to-have",
+          "name": "City view"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        },
+        {
+          "id": 112,
+          "severity": "nice-to-have",
+          "name": "Mall"
+        }
+      ],
+      "addAt": "2023-04-25T15:07:28.451Z",
+      "lastEditAt": "2023-04-25T15:10:32.851Z"
+    },
+    {
+      "name": "Podkrovi 3kk",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/3+kk/praha-liben-na-rokytce/3494122572#img=1",
+      "size": "76",
+      "layout": "3+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QP_K2/BkwBIea.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "11",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Libeň",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "23600",
+      "deposit": "30000",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "",
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 105,
+          "severity": "nice-to-have",
+          "name": "City view"
+        },
+        {
+          "id": 106,
+          "severity": "nice-to-have",
+          "name": "Work room"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        },
+        {
+          "id": 112,
+          "severity": "nice-to-have",
+          "name": "Mall"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        }
+      ],
+      "addAt": "2023-04-25T15:18:12.171Z",
+      "lastEditAt": "2023-04-25T17:15:30.677Z",
+      "id": 31
+    },
+    {
+      "name": "ByTy Malešice",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-malesice-pocernicka/3018073164#img=3",
+      "size": "52",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QJ_Jl/mGsI05.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "19",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Malešice",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "26731",
+      "deposit": "30000",
+      "commission": "15000",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "V projektu ByTy Malešice naleznete veškerou občanskou vybavenost. Jedná se o moderní projekt, který žije, poskytuje standard velkoměsta a zároveň si ponechává drobný odstup od uspěchaného centra, které je vzdáleno jen 5 minut autobusem, než se ocitnete na stanici metra Želivského. Přímo v projektu a v jeho bezprostřední blízkosti jsou k dispozici následující služby: supermarket (LIDL) restaurace a bistra (různé styly), wellness a fitness, kavárny s posezením i káva s sebou, farmářská prodejna, papírnictví, řeznictví, vinotéka, kadeřnictví, fitness, ruční mytí aut, poliklinika, non-stop lékárna, pošta, banka, pojišťovna, prvorepubliková kavárna s obchodem, květinářství, kosmetické salóny, Czech Point, Zásilkovna, knihovna, školka.",
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 111,
+          "severity": "nice-to-have",
+          "name": "External blinds"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        }
+      ],
+      "addAt": "2023-04-25T15:33:33.707Z",
+      "lastEditAt": "2023-04-25T17:14:20.867Z",
+      "id": 32
+    },
+    {
+      "name": "Taborska Nusle",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-nusle-taborska/698160204#img=5",
+      "size": "78",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QN_J3/bCojmL.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "15",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Nusle",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "15600",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "Formou aukce",
+      "id": 33,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        }
+      ],
+      "addAt": "2023-04-25T15:41:40.582Z",
+      "lastEditAt": "2023-04-25T15:45:01.520Z"
+    },
+    {
+      "name": "Taborska Nusle",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-nusle-taborska/74191948#img=6",
+      "size": "77",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QQ_Ld/CErjha.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "14",
+      "distanceToInfinit": null,
+      "distanceToSmartlook": null,
+      "equipped": false,
+      "district": "Nusle",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "15400",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": null,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        }
+      ],
+      "addAt": "2023-04-25T15:46:23.671Z",
+      "lastEditAt": "2023-04-25T15:55:23.336Z",
+      "id": 34
+    },
+    {
+      "name": "Taborska Nusle",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-nusle-taborska/3869054028#img=7",
+      "size": "75",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QI_Jf/hwLjll.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "15",
+      "distanceToInfinit": null,
+      "distanceToSmartlook": null,
+      "equipped": false,
+      "district": "Nusle",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "15000",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": null,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        }
+      ],
+      "addAt": "2023-04-25T15:49:40.404Z",
+      "lastEditAt": "2023-04-25T15:54:01.013Z",
+      "id": 35
+    },
+    {
+      "name": "Taborska Nusle",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/3+kk/praha-nusle-taborska/10294348#img=10",
+      "size": "84",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QI_Jf/1zIjm2.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "15",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Nusle",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "16800",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": "",
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        }
+      ],
+      "addAt": "2023-04-25T15:52:19.896Z",
+      "lastEditAt": "2023-04-25T15:53:42.908Z",
+      "id": 36
+    },
+    {
+      "name": "Taborska Nusle",
+      "link": "https://www.sreality.cz/detail/pronajem/byt/3+kk/praha-nusle-taborska/2912752716#img=12",
+      "size": "78",
+      "layout": "2+kk",
+      "photo": "https://d18-a.sdn.cz/d_18/c_img_QR_MB/dmKjdh.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "15",
+      "distanceToInfinit": null,
+      "distanceToSmartlook": null,
+      "equipped": false,
+      "district": "Nusle",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "15600",
+      "deposit": "",
+      "commission": "",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": null,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 102,
+          "severity": "nice-to-have",
+          "name": "Maisonette"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        }
+      ],
+      "addAt": "2023-04-25T15:56:53.351Z",
+      "lastEditAt": "2023-04-25T15:57:28.676Z",
+      "id": 37
+    },
+    {
+      "name": "Kamna",
+      "link": "https://www.ulovdomov.cz/inzerat/pronajem-praha-vrsovice-praha-10-kodanska-2-kk/5168892",
+      "size": "55",
+      "layout": "2+kk",
+      "photo": "https://photo.ulovdomov.cz/1z/zcwSZL10WY17413541",
+      "prettyScore": "10",
+      "isFavorite": true,
+      "metroDistance": "18",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Vršovice",
+      "availableFrom": "May",
+      "sentMessage": false,
+      "price": "29600",
+      "deposit": "50000",
+      "commission": "25000",
+      "includeEnergies": true,
+      "hasAnswer": false,
+      "note": "nedele 15h, Kodanska 47",
+      "id": 38,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 101,
+          "severity": "nice-to-have",
+          "name": "Bathtub"
+        },
+        {
+          "id": 105,
+          "severity": "nice-to-have",
+          "name": "City view"
+        },
+        {
+          "id": 110,
+          "severity": "nice-to-have",
+          "name": "Residence"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 206,
+          "severity": "disadvantage",
+          "name": "High deposit"
+        },
+        {
+          "id": 204,
+          "severity": "disadvantage",
+          "name": "No metro"
+        }
+      ],
+      "addAt": "2023-04-26T08:17:23.228Z",
+      "lastEditAt": "2023-04-26T10:05:04.182Z"
     }
   ]
 }

@@ -6,10 +6,9 @@ import {
     AiOutlineHeart,
     AiOutlineLayout,
     BsTrash3,
-    BsTrash3Fill,
     FiMapPin,
     IoResize, MdDateRange,
-    MdOutlineEventAvailable,
+    MdOutlineEventAvailable, MdOutlineSettingsBackupRestore,
     RiHandCoinLine,
     RiLuggageDepositLine,
     SiMetrodeparis,
@@ -107,7 +106,7 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                             className='block text-4xl hover:scale-110 transform transition-all'>
                             {flat.isVisible ?
                                 <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
-                                <BsTrash3Fill className='drop-shadow-lg text-gray-600' title='Restore'/>
+                                <MdOutlineSettingsBackupRestore className='drop-shadow-lg text-gray-600' title='Restore'/>
                             }
                         </button>
                         <button

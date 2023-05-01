@@ -13,7 +13,7 @@ import {
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 import {EditFlatFeaturesModal} from "../modals/EditFlatFeaturesModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
-import {toggleFlatData} from "../../services/toggleFlatData.ts";
+import {toggleFlatData} from "../../helpers/toggleFlatData.ts";
 import {FlatFeaturesRing} from "../FlatFeaturesRing.tsx";
 
 export const FlatDetailPage = () => {

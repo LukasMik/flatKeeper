@@ -1,4 +1,4 @@
-import {ColorStatus, IFlat, Severity} from "../types.ts";
+import {IFlat, Severity, ToggleFlatStatus} from "../types.ts";
 import {NavLink} from "react-router-dom";
 import '../styles/flatItem.scss'
 import {
@@ -20,7 +20,7 @@ import {FlatContextProvider} from "../contexts/flatContext.tsx";
 
 interface IProp {
     flat: IFlat
-    handleEdit: (status: string, flat: IFlat) => void
+    handleEdit: (status: ToggleFlatStatus, flat: IFlat) => void
 }
 
 
@@ -81,9 +81,9 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                                     <li>
                                         <MdOutlineEventAvailable/><span>Available from:</span><span>{flat.availableFrom}</span>
                                     </li>
-                                    {flat.addAt ?
+                                    {flat.createdAt ?
                                         <li>
-                                            <MdDateRange/><span>Add at:</span><span>{new Date(flat.addAt).toLocaleDateString()}</span>
+                                            <MdDateRange/><span>Add at:</span><span>{new Date(flat.createdAt).toLocaleDateString()}</span>
                                         </li> : null
                                     }
                                 </ul>
@@ -103,7 +103,7 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                     </a>
                     <div className='flex items-center gap-4' title='Edit flat'>
                         <button
-                            onClick={() => handleEdit('delete', flat)}
+                            onClick={() => handleEdit(ToggleFlatStatus.Delete, flat)}
                             className='block text-4xl hover:scale-110 transform transition-all'>
                             {flat.isVisible ?
                                 <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
@@ -111,7 +111,7 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                             }
                         </button>
                         <button
-                            onClick={() => handleEdit('favourite', flat)}
+                            onClick={() => handleEdit(ToggleFlatStatus.Favourite, flat)}
                             className='block text-4xl hover:scale-110 transform transition-all'>
                             {flat.isFavorite ?
                                 <AiFillHeart className='drop-shadow-lg text-red-600' title='Set as no favourite'/> :

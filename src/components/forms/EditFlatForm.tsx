@@ -47,16 +47,16 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
             data.id = flat.id
             data.isVisible = flat.isVisible
             data.features = flat.features
-            data.addAt = flat.addAt
-            data.lastEditAt = now
+            data.createdAt = flat.createdAt
+            data.lastEditedAt = now
             return editFlatAPI(data, handleSuccess)
         } else {
             data.isVisible = true
             return addFlatAPI({
                 ...data,
                 features: [],
-                addAt: now,
-                lastEditAt: now
+                createdAt: now,
+                lastEditedAt: now
             }, handleSuccess);
         }
     }

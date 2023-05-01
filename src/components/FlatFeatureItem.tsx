@@ -1,4 +1,4 @@
-import {flatFeaturesColor} from "../services/flatFeaturesColor.ts";
+import {flatFeaturesColor} from "../helpers/flatFeaturesColor.ts";
 import {ColorStatus, FlatFeatureAction, IFlat, IFlatFeature, Severity} from "../types.ts";
 import {useFlatContext} from "../contexts/flatContext.tsx";
 import {editFlatFeaturesAPI} from "../apiServices/editFlatFeaturesAPI.tsx";

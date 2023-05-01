@@ -25,8 +25,12 @@ export interface IFlat {
     hasAnswer: boolean
     features: IFlatFeature[]
     note: string
-    addAt: Date
-    lastEditAt: Date
+    createdAt: Date
+    lastEditedAt: Date
+}
+
+export interface IFlatWithScore extends IFlat {
+    bestSuitedScore: number
 }
 
 export interface IFlatFeature {
@@ -51,4 +55,29 @@ export enum ColorStatus {
     TextClass = 'text-class',
     Hex = 'hex',
     BgClass = 'bg-class'
+}
+
+export enum SortBy {
+    CreatedAt = 'createdAt',
+    LastEditedAt = 'lastEditedAt',
+    Price = 'price',
+    BestSuited = 'bestSuitedScore',
+    PrettyPoints = 'prettyScore'
+}
+
+export enum SortDirection {
+    ASC,
+    DESC
+}
+
+export interface IFlatSort {
+    id: number
+    sortBy: SortBy
+    name: string
+    sortFn: (flats: IFlatWithScore[]) => IFlatWithScore[]
+}
+
+export enum ToggleFlatStatus {
+    Delete = 'delete',
+    Favourite = 'favourite'
 }

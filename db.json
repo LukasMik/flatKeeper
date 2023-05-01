@@ -4,14 +4,14 @@
       "id": 1,
       "name": "Maisonette terace Nusle",
       "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/98530-nabidka-pronajem-bytu-sezimova",
-      "isVisible": false,
+      "isVisible": true,
       "size": 100,
       "layout": "2+kk",
       "photo": "https://api.bezrealitky.cz/media/cache/record_main/data/images/advert/98k/98530/1681205773-fdlhmosdjt-phpyojxi4.jpg",
       "prettyScore": 9,
-      "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "isFavorite": true,
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": 11,
       "distanceToInfinit": 23,
       "distanceToSmartlook": 33,
@@ -90,7 +90,8 @@
           "severity": "nice-to-have",
           "name": "Near to city center"
         }
-      ]
+      ],
+      "bestSuitedScore": 27.3
     },
     {
       "id": 2,
@@ -102,8 +103,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F689k%2F689954%2F1635956792-bbntnbpafe.jpg&w=750&q=75",
       "prettyScore": 8,
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:55:30.445Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:55:30.445Z",
       "metroDistance": 3,
       "distanceToInfinit": 18,
       "distanceToSmartlook": 15,
@@ -122,14 +123,14 @@
       "id": 3,
       "name": "Žižkov terrace",
       "link": "https://www.sreality.cz/detail/pronajem/byt/2+kk/praha-zizkov-olgy-havlove/1274881100",
-      "isVisible": false,
+      "isVisible": true,
       "size": 45,
       "layout": "2+kk",
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QL_Jz/eqdC0q.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90,",
       "prettyScore": 8,
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": 22,
       "distanceToInfinit": 30,
       "distanceToSmartlook": 28,
@@ -188,7 +189,8 @@
           "severity": "nice-to-have",
           "name": "External blinds"
         }
-      ]
+      ],
+      "bestSuitedScore": 21.6
     },
     {
       "name": "Old town, near river",
@@ -198,8 +200,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F777k%2F777061%2F1681421200-qhxcotqxhi-phpxd0xq7.jpg&w=750&q=75",
       "prettyScore": "5",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "",
       "distanceToInfinit": "",
       "distanceToSmartlook": "1",
@@ -224,8 +226,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F224k%2F224618%2F1428677733-rdqim-bazen-opalovacka.jpg&w=384&q=75",
       "prettyScore": "4",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -250,8 +252,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F627k%2F627496%2F1600790314-yrgwiosjnn.jpg&w=828&q=75",
       "prettyScore": "8",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "39",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -276,8 +278,8 @@
       "photo": "2",
       "prettyScore": "2",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T16:05:20.432Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T16:05:20.432Z",
       "metroDistance": null,
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -379,8 +381,8 @@
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QN_J3/4hKgvx.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
       "prettyScore": "8",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "8",
       "distanceToInfinit": "",
       "distanceToSmartlook": null,
@@ -405,8 +407,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F649k%2F649643%2F1615023718-anucgphepv.jpg&w=750&q=75",
       "prettyScore": "7",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": null,
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -431,8 +433,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F567k%2F567371%2F1562767083-lhyhiuzyzm.jpg&w=384&q=75",
       "prettyScore": "7",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": null,
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -457,8 +459,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F443k%2F443673%2F1678046380-nzwexsxkfh-phpjbuurs.jpg&w=1080&q=75",
       "prettyScore": "8",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": null,
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -483,8 +485,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F697k%2F697255%2F1640720599-limpgiydec.jpg&w=1080&q=75",
       "prettyScore": "7",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -509,8 +511,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F770k%2F770108%2F1678450296-jrnyglfhso-phpcbsovq.jpg&w=828&q=75",
       "prettyScore": "6",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": null,
       "distanceToInfinit": null,
       "distanceToSmartlook": null,
@@ -535,8 +537,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F515k%2F515868%2F1623418198-jazlfysjtv.jpg&w=384&q=75",
       "prettyScore": "9",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -561,8 +563,8 @@
       "photo": "https://api.bezrealitky.cz/media/cache/record_main/data/images/advert/671k/671000/1625299092-kokfytoenb.jpg",
       "prettyScore": "7",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -587,8 +589,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F772k%2F772529%2F1679615344-mxwwggyblz-phpahzmzl.jpg&w=828&q=75",
       "prettyScore": "8",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "50",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -613,8 +615,8 @@
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QQ_Ld/ze0BIa3.jpeg?fl=res,1920,1080,1|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
       "prettyScore": "8",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "25",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -629,7 +631,8 @@
       "hasAnswer": false,
       "features": [],
       "isVisible": true,
-      "id": 19
+      "id": 19,
+      "bestSuitedScore": 5.6
     },
     {
       "name": "Stresni terasa",
@@ -638,9 +641,9 @@
       "layout": "2+kk",
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QK_Jk/cGqnYg.jpeg?fl=res,1920,1080,1|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
       "prettyScore": "8",
-      "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "isFavorite": true,
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "15",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -712,7 +715,8 @@
           "name": "Residence"
         }
       ],
-      "isVisible": false
+      "isVisible": true,
+      "bestSuitedScore": 18.6
     },
     {
       "name": "Smíchov terasa",
@@ -722,8 +726,8 @@
       "photo": "https://www.bezrealitky.cz/_next/image?url=https%3A%2F%2Fapi.bezrealitky.cz%2Fmedia%2Fcache%2Frecord_main%2Fdata%2Fimages%2Fadvert%2F711k%2F711865%2F1648399223-qufxttwktl.jpg&w=750&q=75",
       "prettyScore": "8",
       "isFavorite": true,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "8",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -815,7 +819,8 @@
           "name": "High deposit"
         }
       ],
-      "isVisible": true
+      "isVisible": true,
+      "bestSuitedScore": 29.6
     },
     {
       "name": "House boat",
@@ -825,8 +830,8 @@
       "photo": "https://sta-reality2.1gr.cz/sta/compile/thumbs/a/6/f/7c7c149ecbaa8aad1d34b01b5b3f4.jpg",
       "prettyScore": "9",
       "isFavorite": false,
-      "addAt": "",
-      "lastEditAt": "2023-04-25T13:19:26.552Z",
+      "createdAt": "",
+      "lastEditedAt": "2023-04-25T13:19:26.552Z",
       "metroDistance": "16",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -845,7 +850,7 @@
       "id": 22
     },
     {
-      "name": "Zrcadla",
+      "name": "Mirrors",
       "link": "https://www.bezrealitky.cz/nemovitosti-byty-domy/640631-nabidka-pronajem-bytu-kratka-praha",
       "size": "72",
       "layout": "2+kk",
@@ -937,10 +942,20 @@
           "id": 1,
           "severity": "required",
           "name": "Mouse"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 104,
+          "severity": "nice-to-have",
+          "name": "Parking"
         }
       ],
-      "addAt": "",
-      "lastEditAt": "2023-04-26T12:29:55.374Z"
+      "createdAt": "",
+      "lastEditedAt": "2023-05-01T10:02:39.895Z"
     },
     {
       "name": "OC EDEN",
@@ -950,8 +965,8 @@
       "photo": "https://d18-a.sdn.cz/d_18/c_img_QJ_Jl/TqnBQ1r.jpeg?fl=res,749,562,3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
       "prettyScore": "8",
       "isFavorite": false,
-      "addAt": "2023-04-25T13:19:30.552Z",
-      "lastEditAt": "2023-04-25T16:01:19.512Z",
+      "createdAt": "2023-04-25T13:19:30.552Z",
+      "lastEditedAt": "2023-04-25T16:01:19.512Z",
       "metroDistance": "18",
       "distanceToInfinit": "",
       "distanceToSmartlook": "",
@@ -1089,8 +1104,8 @@
           "name": "No pet"
         }
       ],
-      "addAt": "2023-04-25T14:10:14.637Z",
-      "lastEditAt": "2023-04-25T14:15:00.951Z",
+      "createdAt": "2023-04-25T14:10:14.637Z",
+      "lastEditedAt": "2023-04-25T14:15:00.951Z",
       "id": 25
     },
     {
@@ -1162,8 +1177,8 @@
           "name": "Parking"
         }
       ],
-      "addAt": "2023-04-25T14:18:02.612Z",
-      "lastEditAt": "2023-04-25T14:23:44.453Z",
+      "createdAt": "2023-04-25T14:18:02.612Z",
+      "lastEditedAt": "2023-04-25T14:23:44.453Z",
       "id": 26
     },
     {
@@ -1245,8 +1260,8 @@
           "name": "No pet"
         }
       ],
-      "addAt": "2023-04-25T14:26:45.543Z",
-      "lastEditAt": "2023-04-25T14:38:53.783Z",
+      "createdAt": "2023-04-25T14:26:45.543Z",
+      "lastEditedAt": "2023-04-25T14:38:53.783Z",
       "id": 27
     },
     {
@@ -1338,8 +1353,8 @@
           "name": "No pet"
         }
       ],
-      "addAt": "2023-04-25T14:46:01.977Z",
-      "lastEditAt": "2023-04-25T14:48:12.710Z",
+      "createdAt": "2023-04-25T14:46:01.977Z",
+      "lastEditedAt": "2023-04-25T14:48:12.710Z",
       "id": 28
     },
     {
@@ -1422,8 +1437,8 @@
           "name": "<50 m2"
         }
       ],
-      "addAt": "2023-04-25T14:54:27.398Z",
-      "lastEditAt": "2023-04-25T15:47:46.023Z"
+      "createdAt": "2023-04-25T14:54:27.398Z",
+      "lastEditedAt": "2023-04-25T15:47:46.023Z"
     },
     {
       "name": "Novostavba Tulipa City",
@@ -1515,8 +1530,8 @@
           "name": "Mall"
         }
       ],
-      "addAt": "2023-04-25T15:07:28.451Z",
-      "lastEditAt": "2023-04-25T15:10:32.851Z"
+      "createdAt": "2023-04-25T15:07:28.451Z",
+      "lastEditedAt": "2023-04-25T15:10:32.851Z"
     },
     {
       "name": "Podkrovi 3kk",
@@ -1617,8 +1632,8 @@
           "name": "Dryer"
         }
       ],
-      "addAt": "2023-04-25T15:18:12.171Z",
-      "lastEditAt": "2023-04-25T17:15:30.677Z",
+      "createdAt": "2023-04-25T15:18:12.171Z",
+      "lastEditedAt": "2023-04-25T17:15:30.677Z",
       "id": 31
     },
     {
@@ -1695,8 +1710,8 @@
           "name": "Commission"
         }
       ],
-      "addAt": "2023-04-25T15:33:33.707Z",
-      "lastEditAt": "2023-04-25T17:14:20.867Z",
+      "createdAt": "2023-04-25T15:33:33.707Z",
+      "lastEditedAt": "2023-04-25T17:14:20.867Z",
       "id": 32
     },
     {
@@ -1764,8 +1779,8 @@
           "name": "<50 m2"
         }
       ],
-      "addAt": "2023-04-25T15:41:40.582Z",
-      "lastEditAt": "2023-04-25T15:45:01.520Z"
+      "createdAt": "2023-04-25T15:41:40.582Z",
+      "lastEditedAt": "2023-04-25T15:45:01.520Z"
     },
     {
       "name": "Taborska Nusle",
@@ -1841,8 +1856,8 @@
           "name": "<50 m2"
         }
       ],
-      "addAt": "2023-04-25T15:46:23.671Z",
-      "lastEditAt": "2023-04-25T15:55:23.336Z",
+      "createdAt": "2023-04-25T15:46:23.671Z",
+      "lastEditedAt": "2023-04-25T15:55:23.336Z",
       "id": 34
     },
     {
@@ -1919,8 +1934,8 @@
           "name": "<50 m2"
         }
       ],
-      "addAt": "2023-04-25T15:49:40.404Z",
-      "lastEditAt": "2023-04-25T15:54:01.013Z",
+      "createdAt": "2023-04-25T15:49:40.404Z",
+      "lastEditedAt": "2023-04-25T15:54:01.013Z",
       "id": 35
     },
     {
@@ -2007,8 +2022,8 @@
           "name": "<50 m2"
         }
       ],
-      "addAt": "2023-04-25T15:52:19.896Z",
-      "lastEditAt": "2023-04-25T15:53:42.908Z",
+      "createdAt": "2023-04-25T15:52:19.896Z",
+      "lastEditedAt": "2023-04-25T15:53:42.908Z",
       "id": 36
     },
     {
@@ -2095,8 +2110,8 @@
           "name": "<50 m2"
         }
       ],
-      "addAt": "2023-04-25T15:56:53.351Z",
-      "lastEditAt": "2023-04-25T15:57:28.676Z",
+      "createdAt": "2023-04-25T15:56:53.351Z",
+      "lastEditedAt": "2023-04-25T15:57:28.676Z",
       "id": 37
     },
     {
@@ -2184,8 +2199,107 @@
           "name": "No metro"
         }
       ],
-      "addAt": "2023-04-26T08:17:23.228Z",
-      "lastEditAt": "2023-04-26T10:05:04.182Z"
+      "createdAt": "2023-04-26T08:17:23.228Z",
+      "lastEditedAt": "2023-04-26T10:05:04.182Z",
+      "bestSuitedScore": 22
+    },
+    {
+      "name": "Vilka v Dejvicich",
+      "link": "https://reality.idnes.cz/detail/pronajem/byt/praha-6-starodejvicka/6448c4f177836726ef01ae14/#images-1",
+      "size": "79",
+      "layout": "2+kk",
+      "photo": "https://sta-reality2.1gr.cz/sta/compile/thumbs/b/c/7/a798ffe426598520cf25682119a93.jpg",
+      "prettyScore": "8",
+      "isFavorite": false,
+      "metroDistance": "11",
+      "distanceToInfinit": "",
+      "distanceToSmartlook": "",
+      "equipped": false,
+      "district": "Dejvice",
+      "availableFrom": "June",
+      "sentMessage": false,
+      "price": "26300",
+      "deposit": "49000",
+      "commission": "29645",
+      "includeEnergies": false,
+      "hasAnswer": false,
+      "note": null,
+      "id": 39,
+      "isVisible": true,
+      "features": [
+        {
+          "id": 1,
+          "severity": "required",
+          "name": "Mouse"
+        },
+        {
+          "id": 2,
+          "severity": "required",
+          "name": "Dryer"
+        },
+        {
+          "id": 3,
+          "severity": "required",
+          "name": "Metro"
+        },
+        {
+          "id": 4,
+          "severity": "required",
+          "name": "Pantry"
+        },
+        {
+          "id": 5,
+          "severity": "required",
+          "name": "Storage space"
+        },
+        {
+          "id": 6,
+          "severity": "required",
+          "name": "Large kitchen"
+        },
+        {
+          "id": 8,
+          "severity": "required",
+          "name": "Hanging chair"
+        },
+        {
+          "id": 9,
+          "severity": "required",
+          "name": "Dishwasher"
+        },
+        {
+          "id": 10,
+          "severity": "required",
+          "name": "Terrace"
+        },
+        {
+          "id": 206,
+          "severity": "disadvantage",
+          "name": "High deposit"
+        },
+        {
+          "id": 202,
+          "severity": "disadvantage",
+          "name": "Commission"
+        },
+        {
+          "id": 107,
+          "severity": "nice-to-have",
+          "name": "Separate toilet"
+        },
+        {
+          "id": 108,
+          "severity": "nice-to-have",
+          "name": "<50 m2"
+        },
+        {
+          "id": 103,
+          "severity": "nice-to-have",
+          "name": "Air conditioning"
+        }
+      ],
+      "createdAt": "2023-04-28T10:48:45.761Z",
+      "lastEditedAt": "2023-04-28T10:55:46.180Z"
     }
   ]
 }

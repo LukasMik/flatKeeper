@@ -59,7 +59,6 @@ export enum ColorStatus {
 
 export enum SortBy {
     CreatedAt = 'createdAt',
-    LastEditedAt = 'lastEditedAt',
     Price = 'price',
     BestSuited = 'bestSuitedScore',
     PrettyPoints = 'prettyScore'

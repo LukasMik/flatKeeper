@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {IFlat, Severity} from "../../types.ts";
+import {IFlat} from "../../types.ts";
 import {getFlatByIdAPI} from "../../apiServices/getFlatByIdAPI.tsx";
 import {
     AiFillHeart,
@@ -14,7 +14,6 @@ import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 import {EditFlatFeaturesModal} from "../modals/EditFlatFeaturesModal.tsx";
 import {FlatContextProvider} from "../../contexts/flatContext.tsx";
 import {toggleFlatData} from "../../helpers/toggleFlatData.ts";
-import {FlatFeaturesRing} from "../FlatFeaturesRing.tsx";
 
 export const FlatDetailPage = () => {
     const {id} = useParams()

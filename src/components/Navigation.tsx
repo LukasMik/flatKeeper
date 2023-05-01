@@ -6,7 +6,7 @@ export const Navigation = () => {
 
     const scrollBreakPoint: number = 20
     const scrollDownClasses: string = 'bg-opacity-50 h-16 text-gray-100'
-    const scrollUpClasses: string = 'h-28'
+    const scrollUpClasses: string = 'h-20'
 
     useEffect(() => {
         window.scrollY > scrollBreakPoint ? setScrollClasses(scrollDownClasses) : setScrollClasses(scrollUpClasses)

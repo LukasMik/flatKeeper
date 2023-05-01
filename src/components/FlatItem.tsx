@@ -14,7 +14,7 @@ import {
     SiMetrodeparis,
     TbDiamond
 } from "react-icons/all";
-import {FlatFeaturesRing} from "./FlatFeaturesRing.tsx";
+import {FlatFeaturesRing} from "./flatFeatures/FlatFeaturesRing.tsx";
 import {FlatContextProvider} from "../contexts/flatContext.tsx";
 
 interface IProp {

@@ -12,8 +12,8 @@ export interface IFlat {
     prettyScore: number
     isFavorite: boolean
     metroDistance: number
-    distanceToInfinit: number
-    distanceToSmartlook: number
+    gfJobDistance: number
+    bfJobDistance: number
     equipped: boolean
     district: string
     availableFrom: string

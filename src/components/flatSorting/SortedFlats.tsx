@@ -1,7 +1,7 @@
-import {FlatItem} from "./FlatItem.tsx";
-import {toggleFlatData} from "../helpers/toggleFlatData.ts";
-import {IFlat, IFlatWithScore, Severity, SortBy} from "../types.ts";
-import {getSortedFlats} from "../helpers/getSortedFlats.ts";
+import {FlatItem} from "../FlatItem.tsx";
+import {toggleFlatData} from "../../helpers/toggleFlatData.ts";
+import {IFlat, IFlatWithScore, Severity, SortBy} from "../../types.ts";
+import {getSortedFlats} from "../../helpers/getSortedFlats.ts";
 
 interface IProps {
     flats: IFlat[]
@@ -30,10 +30,12 @@ export const SortedFlats = ({flats, sortBy, isHistory, isFavourites, reload}: IP
 
     return (
         <>
+            <div className='flex items-cenetr justify-center flex-wrap gap-12'>
             {sortedFlats?.map(flat => (
                 <FlatItem key={flat.id} flat={flat}
                           handleEdit={(status, flat) => toggleFlatData(status, flat, reload)}/>
             ))}
+            </div>
         </>
     )
 }

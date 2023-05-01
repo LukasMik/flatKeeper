@@ -1,9 +1,9 @@
 import React from 'react';
-import {ProgressRing} from './ProgressRing.tsx';
-import {ColorStatus, Severity} from "../types.ts";
-import {flatFeaturesColor} from "../helpers/flatFeaturesColor.ts";
-import {useFlatContext} from "../contexts/flatContext.tsx";
-import {ALLFLATFEATURES} from "../constants/flatFeatures.ts";
+import {ProgressRing} from '../../flatFeatures/ProgressRing.tsx';
+import {ColorStatus, Severity} from "../../types.ts";
+import {flatFeaturesColor} from "../../helpers/flatFeaturesColor.ts";
+import {useFlatContext} from "../../contexts/flatContext.tsx";
+import {ALLFLATFEATURES} from "../../constants/flatFeatures.ts";
 
 interface IProps {
     severity: Severity

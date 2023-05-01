@@ -13,9 +13,17 @@ export const SORT_FLATS_ITEMS: IFlatSort[] = [
         id: 1,
         sortBy: SortBy.CreatedAt,
         name: 'Last added',
-        sortFn: (flatsWithScore, direction = SortDirection.ASC) => {
+        sortFn: (flatsWithScore, direction = SortDirection.DESC) => {
             const sorted = flatsWithScore
-                .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+                .sort((a, b) => {
+                    const dateA: Date = new Date(a.createdAt);
+                    const dateB: Date = new Date(b.createdAt);
+                    if (dateA.getDate() === dateB.getDate()) {
+                        return dateA.getTime() - dateB.getTime();
+                    } else {
+                        return dateB.getDate() - dateA.getDate();
+                    }
+                })
             return sortByDirection(sorted, direction)
         }
     }, {

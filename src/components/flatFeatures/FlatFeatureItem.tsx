@@ -1,7 +1,7 @@
-import {flatFeaturesColor} from "../helpers/flatFeaturesColor.ts";
-import {ColorStatus, FlatFeatureAction, IFlat, IFlatFeature, Severity} from "../types.ts";
-import {useFlatContext} from "../contexts/flatContext.tsx";
-import {editFlatFeaturesAPI} from "../apiServices/editFlatFeaturesAPI.tsx";
+import {flatFeaturesColor} from "../../helpers/flatFeaturesColor.ts";
+import {ColorStatus, FlatFeatureAction, IFlat, IFlatFeature, Severity} from "../../types.ts";
+import {useFlatContext} from "../../contexts/flatContext.tsx";
+import {editFlatFeaturesAPI} from "../../apiServices/editFlatFeaturesAPI.tsx";
 
 interface IProps {
     flatFeature: IFlatFeature

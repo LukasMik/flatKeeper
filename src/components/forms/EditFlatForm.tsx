@@ -23,8 +23,8 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
             prettyScore: flat.prettyScore ?? null,
             isFavorite: flat.isFavorite ?? false,
             metroDistance: flat.metroDistance ?? null,
-            distanceToInfinit: flat.distanceToInfinit ?? null,
-            distanceToSmartlook: flat.distanceToSmartlook ?? null,
+            gfJobDistance: flat.gfJobDistance ?? null,
+            bfJobDistance: flat.bfJobDistance ?? null,
             equipped: flat.equipped ?? false,
             district: flat.district ?? null,
             availableFrom: flat.availableFrom ?? 'June',
@@ -64,11 +64,11 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)} className='text-mauve11' noValidate>
-                <div className="flex items-center gap-8 mb-8">
+            <form onSubmit={handleSubmit(onSubmit)} className='text-black text-opacity-70' noValidate>
+                <div className="form-group">
                     <div className=" w-1/3 relative">
                         <label htmlFor="name">Name*</label>
-                        <input type="text" id="name" placeholder='Set name of Flat'
+                        <input type="text" id="name" placeholder='Flat name'
                                className="input-styles" {...register('name', {
                             required: 'Name is required!'
                         })}/>
@@ -84,14 +84,14 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                     <div className=" w-1/3 relative">
                         <label htmlFor="photo">Photo*</label>
                         <input type="text" id="photo"
-                               placeholder='Right click + copy image address'
+                               placeholder='Paste image address - https://www.bezre...'
                                className="input-styles" {...register('photo')}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.photo?.message}</p>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-8 mb-8">
-                    <div className=" w-1/3 relative">
+                <div className="form-group">
+                    <div className=" w-1/3">
                         <label htmlFor="size">Size*</label>
                         <input type="number" id="size" placeholder='m&#178;'
                                className="input-styles" {...register('size', {
@@ -99,7 +99,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         })}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.size?.message}</p>
                     </div>
-                    <div className=" w-1/3 relative">
+                    <div className=" w-1/3">
                         <label htmlFor="prettyScore">Pretty points*</label>
                         <input type="number" id="prettyScore" placeholder='x / 10 points'
                                className="input-styles" {...register('prettyScore', {
@@ -107,9 +107,9 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         })}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.prettyScore?.message}</p>
                     </div>
-                    <div className=" w-1/3 relative">
+                    <div className=" w-1/3">
                         <label htmlFor="district">District*</label>
-                        <input type="text" id="district" placeholder='Set a district'
+                        <input type="text" id="district" placeholder='Vinohrady'
                                className="input-styles" {...register('district', {
                             required: 'District is required!'
                         })}/>
@@ -117,8 +117,8 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-8 mb-8">
-                    <div className="w-1/3 relative">
+                <div className="form-group">
+                    <div className="w-1/3">
                         <label htmlFor="price">Price*</label>
                         <input type="number" id="price" placeholder='Kč'
                                className="input-styles" {...register('price', {
@@ -138,26 +138,26 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-8 mb-8">
+                <div className="form-group">
                     <div className=" w-1/3">
                         <label htmlFor="metroDistance">Metro Distance</label>
                         <input type="number" id="metroDistance" placeholder="Min walk"
                                className="input-styles" {...register('metroDistance')}/>
                     </div>
                     <div className=" w-1/3">
-                        <label htmlFor="distanceToInfinit">Distance to Infinit</label>
-                        <input type="number" id="distanceToInfinit"
-                               placeholder="min MHD" className="input-styles" {...register('distanceToInfinit')}/>
+                        <label htmlFor="gfJobDistance">GF job distance</label>
+                        <input type="number" id="gfJobDistance"
+                               placeholder="min MHD" className="input-styles" {...register('gfJobDistance')}/>
                     </div>
                     <div className=" w-1/3">
-                        <label htmlFor="distanceToSmartlook">Distance to Smartlook</label>
-                        <input type="text" id="distanceToSmartlook"
-                               placeholder="min MHD" className="input-styles" {...register('distanceToSmartlook')}/>
+                        <label htmlFor="bfJobDistance">BF job distance</label>
+                        <input type="text" id="bfJobDistance"
+                               placeholder="min MHD" className="input-styles" {...register('bfJobDistance')}/>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-8 mb-8">
-                    <div className="w-1/3 relative">
+                <div className="form-group">
+                    <div className="w-1/3">
                         <label htmlFor="availableFrom">Available from*</label>
                         <select id="availableFrom" {...register('availableFrom')}
                                 className="select-styles">
@@ -167,7 +167,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                             <option value="July">July</option>
                         </select>
                     </div>
-                    <div className="w-1/3 relative">
+                    <div className="w-1/3">
                         <label htmlFor="layout">Layout*</label>
                         <select id="layout" {...register('layout')}
                                 className="select-styles">
@@ -179,40 +179,40 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         </select>
                     </div>
                     <div className="w-1/3">
-                        <label htmlFor="includeEnergies" className="text-xl block">Include
+                        <label htmlFor="includeEnergies" className="block text-center">Include
                             energies</label>
                         <input type="checkbox" id="includeEnergies" {...register('includeEnergies')}
                                className='checkbox-styles'/>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-8">
+                <div className="form-group">
                     <div className="w-1/4">
-                        <label htmlFor="isFavorite" className="text-xl block text-center">Set as favorite</label>
+                        <label htmlFor="isFavorite" className="block text-center">Set as favorite</label>
                         <input type="checkbox" id="isFavorite" {...register('isFavorite')}
-                               className='checkbox-styles mx-auto'/>
+                               className='checkbox-styles'/>
                     </div>
                     <div className="w-1/4">
-                        <label htmlFor="equipped" className="text-xl block text-center">Equipped</label>
+                        <label htmlFor="equipped" className="block text-center">Equipped</label>
                         <input type="checkbox" id="equipped" {...register('equipped')}
-                               className='checkbox-styles mx-auto'/>
+                               className='checkbox-styles'/>
                     </div>
                     <div className="w-1/4">
-                        <label htmlFor="sentMessage" className="text-xl block text-center">Sent Message?</label>
+                        <label htmlFor="sentMessage" className="block text-center">Sent Message?</label>
                         <input type="checkbox" id="sentMessage" {...register('sentMessage')}
-                               className='checkbox-styles mx-auto'/>
+                               className='checkbox-styles'/>
                     </div>
                     <div className="w-1/4">
-                        <label htmlFor="hasAnswer" className="text-xl block text-center">Has Answer?</label>
+                        <label htmlFor="hasAnswer" className="block text-center">Has Answer?</label>
                         <input type="checkbox" id="hasAnswer" {...register('hasAnswer')}
-                               className='checkbox-styles mx-auto'/>
+                               className='checkbox-styles'/>
                     </div>
                 </div>
                 <div className="flex justify-center">
                     <div className="w-full">
-                        <label htmlFor="note" className="text-xl block text-center">Note</label>
-                        <textarea rows={4} id="note" {...register('note')}
-                                  className='input-styles h-24'/>
+                        <label htmlFor="note" className="block text-center">Note</label>
+                        <textarea rows={3} id="note" {...register('note')}
+                                  className='input-styles'/>
                     </div>
                 </div>
                 <button

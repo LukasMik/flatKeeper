@@ -3,8 +3,8 @@ import {IFlat, SortBy} from "../../types.ts";
 import {getAllFlatsAPI} from "../../apiServices/getAllFlatsAPI.tsx";
 import {EditFlatModal} from "../modals/EditFlatModal.tsx";
 import {useLocation} from "react-router-dom";
-import {ToggleSortFlats} from "../ToggleSortFlats.tsx";
-import {SortedFlats} from "../SortedFlats.tsx";
+import {SortedFlats} from "../flatSorting/SortedFlats.tsx";
+import {SortComponent} from "../flatSorting/SortComponent.tsx";
 
 export const HomePage = () => {
     const [flats, setFlats] = useState<IFlat[]>([])
@@ -19,14 +19,9 @@ export const HomePage = () => {
     if (useLocation().pathname === '/history') {
         return (
             <>
-                <div className='flex items-center gap-4 justify-end mr-12'>
-                    <p className="text-center text-xl mb-2">Sort by:</p>
-                    <div className="flex justify-center">
-                        <ToggleSortFlats setCurrentSort={(sort) => setCurrentSort(sort)}/>
-                    </div>
-                </div>
-                <h3 className='mb-12 ml-12'>History:</h3>
-                <div className='flex items-cenetr justify-center flex-wrap gap-20'>
+                <div className="mx-12">
+                    <SortComponent handleSort={(sort: SortBy) => setCurrentSort(sort)}/>
+                    <p className='my-12 text-2xl font-bold text-center'>History:</p>
                     <SortedFlats flats={flats} sortBy={currentSort} reload={() => setReload(!reload)} isHistory={true}/>
                 </div>
             </>
@@ -34,25 +29,18 @@ export const HomePage = () => {
     } else {
         return (
             <>
-                <div className='flex items-center gap-4 justify-end mr-12'>
-                    <p className="text-center text-xl mb-2">Sort by:</p>
-                    <div className="flex justify-center">
-                        <ToggleSortFlats setCurrentSort={(sort) => setCurrentSort(sort)}/>
-                    </div>
-                </div>
-                <h3 className='mb-12 ml-12'>Favourites:</h3>
-                <div className='flex items-cenetr justify-center flex-wrap gap-20'>
+                <div className="mx-12">
+                    <SortComponent handleSort={(sort: SortBy) => setCurrentSort(sort)}/>
+                    <p className='my-12 text-2xl font-bold text-center'>Favourites:</p>
                     <SortedFlats flats={flats} sortBy={currentSort} reload={() => setReload(!reload)}
                                  isFavourites={true}/>
-                </div>
-                <h3 className='my-12 ml-12'>Others:</h3>
-                <div className='flex items-cenetr justify-center flex-wrap gap-20'>
+                    <p className='my-12 text-2xl font-bold text-center'>Others:</p>
                     <SortedFlats flats={flats} sortBy={currentSort} reload={() => setReload(!reload)}/>
-                </div>
-                <div className="fixed bottom-6 right-6">
-                    <div title='Add new flat' onClick={() => setIsFormPrepared(true)}>
-                        <EditFlatModal status='new' onOpenChange={() => setIsFormPrepared(false)}
-                                       isFormPrepared={isFormPrepared}/>
+                    <div className="fixed bottom-6 right-6">
+                        <div title='Add new flat' onClick={() => setIsFormPrepared(true)}>
+                            <EditFlatModal status='new' onOpenChange={() => setIsFormPrepared(false)}
+                                           isFormPrepared={isFormPrepared}/>
+                        </div>
                     </div>
                 </div>
             </>

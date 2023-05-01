@@ -1,9 +1,9 @@
-import {IFlat, Severity} from "../types.ts";
+import {IFlat, Severity} from "../../types.ts";
 import {FlatFeaturesAvailable} from "./FlatFeaturesAvailable.tsx";
 import {FlatFeaturesUsed} from "./FlatFeaturesUsed.tsx";
 import {useEffect, useState} from "react";
-import {FlatContextProvider} from "../contexts/flatContext.tsx";
-import {getFlatByIdAPI} from "../apiServices/getFlatByIdAPI.tsx";
+import {FlatContextProvider} from "../../contexts/flatContext.tsx";
+import {getFlatByIdAPI} from "../../apiServices/getFlatByIdAPI.tsx";
 import {useParams} from "react-router-dom";
 
 export const FlatFeatures = () => {

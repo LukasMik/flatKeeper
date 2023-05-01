@@ -1,5 +1,5 @@
-import {IFlatFeature, FlatFeatureAction, Severity} from "../types.ts";
-import {ALLFLATFEATURES} from "../constants/flatFeatures.ts";
+import {IFlatFeature, FlatFeatureAction, Severity} from "../../types.ts";
+import {ALLFLATFEATURES} from "../../constants/flatFeatures.ts";
 import {FlatFeatureItem} from "./FlatFeatureItem.tsx";
 
 interface IProps {

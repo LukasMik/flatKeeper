@@ -284,7 +284,7 @@
       "equipped": false,
       "district": "2",
       "availableFrom": "July",
-      "sentMessage": false,
+      "sentMessage": true,
       "price": "2",
       "deposit": "5",
       "commission": "",
@@ -371,7 +371,7 @@
         }
       ],
       "createdAt": "",
-      "lastEditedAt": "2023-05-01T11:17:22.217Z"
+      "lastEditedAt": "2023-05-01T14:25:15.712Z"
     },
     {
       "name": "Rezidence Pergamenka",
@@ -954,7 +954,7 @@
         }
       ],
       "createdAt": "",
-      "lastEditedAt": "2023-05-01T11:05:06.089Z",
+      "lastEditedAt": "2023-05-01T14:16:47.184Z",
       "bestSuitedScore": 31.6
     },
     {

@@ -29,18 +29,18 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
             <div className="w-wFlatItem relative">
                 <NavLink to={`/flat-detail/${flat.id}`}>
                     <div
-                        className="h-hFlatItem relative overflow-hidden m-1 transform hover:scale-105 transition-all rounded-xl hover:rounded-2xl group relative">
+                        className="h-hFlatItem relative overflow-hidden m-1 transform md:hover:scale-105 transition-all rounded-xl md:hover:rounded-2xl group relative">
                         <img
                             src={flat.photo}
                             className="w-full h-full object-cover bg-gray-300"
-                            alt="Country Photo"
+                            alt="Flat_photo"
                         />
                         <div className="description">
                             <div className='flex flex-col gap-4 group-hover:gap-2 justify-around'>
                                 <p className="text-2xl font-bold line-clamp-1 group-hover:line-clamp-4 text-center group-hover:text-3xl group-hover:mb-2 duration-300">
                                     {flat.name}
                                 </p>
-                                <ul className="flex justify-between px-12 line-clamp-1 items-center">
+                                <ul className="flex justify-between px-4 md:px-12 line-clamp-1 items-center">
                                     <li className='flex justify-center items-center gap-2'>
                                         <AiOutlineLayout/>{flat.layout}
                                     </li>
@@ -60,30 +60,48 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                             </div>
                             <div className="hidden-content">
                                 <ul>
-                                    {flat.metroDistance ?
-                                    <li>
-                                        <SiMetrodeparis/><span>Metro distance:</span><span>{`${flat.metroDistance} min walk`}</span>
-                                    </li> : null
+                                    {flat.metroDistance &&
+                                        <li>
+                                            <div className="flex items-center gap-2">
+                                                <SiMetrodeparis/><span className=''>Metro:</span>
+                                            </div>
+                                            <span className=''>{`${flat.metroDistance} min walk`}</span>
+                                        </li>
                                     }
                                     <li>
-                                        <FiMapPin/><span>District:</span><span>{flat.district}</span>
+                                        <div className="flex items-center gap-2">
+                                            <FiMapPin/><span>District:</span>
+                                        </div>
+                                        <span>{flat.district}</span>
                                     </li>
-                                    {flat.deposit ?
+                                    {flat.deposit &&
                                         <li>
-                                            <RiLuggageDepositLine/><span>Deposit:</span><span>{Number(flat.deposit).toLocaleString()} Kč</span>
-                                        </li> : null}
-                                    {flat.commission ?
+                                            <div className="flex items-center gap-2">
+                                                <RiLuggageDepositLine/><span>Deposit:</span>
+                                            </div>
+                                            <span>{Number(flat.deposit).toLocaleString()} Kč</span>
+                                        </li>}
+                                    {flat.commission &&
                                         <li>
-                                            <RiHandCoinLine/><span>Commission:</span><span>{Number(flat.commission).toLocaleString()} Kč</span>
-                                        </li> : null
+                                            <div className="flex items-center gap-2">
+                                                <RiHandCoinLine/><span>Commission:</span>
+
+                                            </div>
+                                            <span>{Number(flat.commission).toLocaleString()} Kč</span>
+                                        </li>
                                     }
                                     <li>
-                                        <MdOutlineEventAvailable/><span>Available from:</span><span>{flat.availableFrom}</span>
+                                        <div className="flex items-center gap-2"><MdOutlineEventAvailable/><span>Available from:</span>
+
+                                        </div>
+                                        <span>{flat.availableFrom}</span>
                                     </li>
-                                    {flat.createdAt ?
+                                    {flat.createdAt &&
                                         <li>
-                                            <MdDateRange/><span>Add at:</span><span>{new Date(flat.createdAt).toLocaleDateString()}</span>
-                                        </li> : null
+                                            <div className="flex items-center gap-2"><MdDateRange/><span>Add at:</span>
+                                            </div>
+                                            <span>{new Date(flat.createdAt).toLocaleDateString()}</span>
+                                        </li>
                                     }
                                 </ul>
                             </div>
@@ -106,7 +124,8 @@ export const FlatItem = ({flat, handleEdit}: IProp) => {
                             className='block text-4xl hover:scale-110 transform transition-all'>
                             {flat.isVisible ?
                                 <BsTrash3 className='drop-shadow-lg text-gray-600' title='Delete'/> :
-                                <MdOutlineSettingsBackupRestore className='drop-shadow-lg text-gray-600' title='Restore'/>
+                                <MdOutlineSettingsBackupRestore className='drop-shadow-lg text-gray-600'
+                                                                title='Restore'/>
                             }
                         </button>
                         <button

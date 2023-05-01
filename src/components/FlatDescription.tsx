@@ -18,7 +18,7 @@ interface IProps {
 export const FlatDescription = ({flat}: IProps) => {
     return (
         <>
-            <div className="flex justify-between p-6">
+            <div className="flex flex-col md:flex-row gap-4 justify-between p-4">
                 <div>
                     <p className="text-3xl font-bold mb-4">{flat.name}</p>
                     <div className="flex item-center gap-4">
@@ -30,7 +30,7 @@ export const FlatDescription = ({flat}: IProps) => {
                         </span>
                     </div>
                 </div>
-                <div className='text-right'>
+                <div className='md:text-right'>
                     {flat.includeEnergies ?
                         <p className="text-3xl font-bold mb-4">{Number(flat.price).toLocaleString()} Kč</p> :
                         <p className="text-3xl font-bold mb-4">{Number(flat.price).toLocaleString()} Kč <span
@@ -48,7 +48,7 @@ export const FlatDescription = ({flat}: IProps) => {
                         </p> : null}
                 </div>
             </div>
-            <div className='p-6 flex items-center justify-between'>
+            <div className='p-6 lg:flex items-center justify-between'>
                 <ul>
                     <li className='flex items-center gap-2 text-xl mb-5'>
                         <SiMetrodeparis className='text-2xl'/>

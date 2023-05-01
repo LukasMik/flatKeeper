@@ -21,8 +21,8 @@ export const FlatFeatures = () => {
 
     return (
         <FlatContextProvider flat={flat}>
-            <div className="flex items-stretch mt-8">
-                <div className="w-2/3">
+            <div className="flex items-stretch mt-8 mb-24 md:mb-0">
+                <div className="w-1/2 md:w-2/3">
                     <FlatFeaturesAvailable severity={Severity.Required}
                                            onSuccess={() => setReload(!reload)}/>
                     <FlatFeaturesAvailable severity={Severity.NiceToHave}
@@ -30,7 +30,7 @@ export const FlatFeatures = () => {
                     <FlatFeaturesAvailable severity={Severity.Disadvantage}
                                            onSuccess={() => setReload(!reload)}/>
                 </div>
-                <div className="w-1/3">
+                <div className="w-1/2 md:w-1/3">
                     <p className="text-2xl text-center mb-4">Used</p>
                     <div className="flex justify-around">
                         <FlatFeaturesUsed severity={Severity.Required}

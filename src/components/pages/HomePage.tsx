@@ -19,7 +19,7 @@ export const HomePage = () => {
     if (useLocation().pathname === '/history') {
         return (
             <>
-                <div className="mx-12">
+                <div className="main-container">
                     <SortComponent handleSort={(sort: SortBy) => setCurrentSort(sort)}/>
                     <p className='my-12 text-2xl font-bold text-center'>History:</p>
                     <SortedFlats flats={flats} sortBy={currentSort} reload={() => setReload(!reload)} isHistory={true}/>
@@ -29,7 +29,7 @@ export const HomePage = () => {
     } else {
         return (
             <>
-                <div className="mx-12">
+                <div className="main-container">
                     <SortComponent handleSort={(sort: SortBy) => setCurrentSort(sort)}/>
                     <p className='my-12 text-2xl font-bold text-center'>Favourites:</p>
                     <SortedFlats flats={flats} sortBy={currentSort} reload={() => setReload(!reload)}

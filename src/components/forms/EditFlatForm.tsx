@@ -64,9 +64,9 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)} className='text-black text-opacity-70' noValidate>
+            <form onSubmit={handleSubmit(onSubmit)} className='text-black text-opacity-70 mb-24 md:mb-0' noValidate>
                 <div className="form-group">
-                    <div className=" w-1/3 relative">
+                    <div className="w-full md:w-1/3 relative">
                         <label htmlFor="name">Name*</label>
                         <input type="text" id="name" placeholder='Flat name'
                                className="input-styles" {...register('name', {
@@ -74,14 +74,14 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         })}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.name?.message}</p>
                     </div>
-                    <div className=" w-1/3 relative">
+                    <div className="w-full md:w-1/3 relative">
                         <label htmlFor="link">Link to advert*</label>
                         <input type="text" id="link"
                                placeholder='https://www.bezrealitky.cz/nemovitosti-byty-domy/689954-nabidka-pronajem-bytu-drahobejlova-hlavni-mesto-praha'
                                className="input-styles" {...register('link')}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.link?.message}</p>
                     </div>
-                    <div className=" w-1/3 relative">
+                    <div className="w-full md:w-1/3 relative">
                         <label htmlFor="photo">Photo*</label>
                         <input type="text" id="photo"
                                placeholder='Paste image address - https://www.bezre...'
@@ -91,7 +91,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                 </div>
 
                 <div className="form-group">
-                    <div className=" w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="size">Size*</label>
                         <input type="number" id="size" placeholder='m&#178;'
                                className="input-styles" {...register('size', {
@@ -99,7 +99,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         })}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.size?.message}</p>
                     </div>
-                    <div className=" w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="prettyScore">Pretty points*</label>
                         <input type="number" id="prettyScore" placeholder='x / 10 points'
                                className="input-styles" {...register('prettyScore', {
@@ -107,7 +107,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         })}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.prettyScore?.message}</p>
                     </div>
-                    <div className=" w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="district">District*</label>
                         <input type="text" id="district" placeholder='Vinohrady'
                                className="input-styles" {...register('district', {
@@ -118,7 +118,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                 </div>
 
                 <div className="form-group">
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="price">Price*</label>
                         <input type="number" id="price" placeholder='Kč'
                                className="input-styles" {...register('price', {
@@ -126,12 +126,12 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                         })}/>
                         <p className='text-red-500 mt-2 absolute -bottom-5 right-0 text-sm'>{errors.price?.message}</p>
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="deposit">Deposit</label>
                         <input type="number" id="deposit" placeholder='Kč'
                                className="input-styles" {...register('deposit')}/>
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="commission">Commission</label>
                         <input type="number" id="commission" placeholder='Kč'
                                className="input-styles" {...register('commission')}/>
@@ -139,17 +139,17 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                 </div>
 
                 <div className="form-group">
-                    <div className=" w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="metroDistance">Metro Distance</label>
                         <input type="number" id="metroDistance" placeholder="Min walk"
                                className="input-styles" {...register('metroDistance')}/>
                     </div>
-                    <div className=" w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="gfJobDistance">GF job distance</label>
                         <input type="number" id="gfJobDistance"
                                placeholder="min MHD" className="input-styles" {...register('gfJobDistance')}/>
                     </div>
-                    <div className=" w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="bfJobDistance">BF job distance</label>
                         <input type="text" id="bfJobDistance"
                                placeholder="min MHD" className="input-styles" {...register('bfJobDistance')}/>
@@ -157,7 +157,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                 </div>
 
                 <div className="form-group">
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="availableFrom">Available from*</label>
                         <select id="availableFrom" {...register('availableFrom')}
                                 className="select-styles">
@@ -167,7 +167,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                             <option value="July">July</option>
                         </select>
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                         <label htmlFor="layout">Layout*</label>
                         <select id="layout" {...register('layout')}
                                 className="select-styles">
@@ -178,7 +178,7 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                             <option value="atypical">Atypical</option>
                         </select>
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3 mt-4 md:mt-0">
                         <label htmlFor="includeEnergies" className="block text-center">Include
                             energies</label>
                         <input type="checkbox" id="includeEnergies" {...register('includeEnergies')}
@@ -187,27 +187,28 @@ export const EditFlatForm = ({handleSuccess}: IProps) => {
                 </div>
 
                 <div className="form-group">
-                    <div className="w-1/4">
+                    <div className="w-full md:w-1/4">
                         <label htmlFor="isFavorite" className="block text-center">Set as favorite</label>
                         <input type="checkbox" id="isFavorite" {...register('isFavorite')}
                                className='checkbox-styles'/>
                     </div>
-                    <div className="w-1/4">
+                    <div className="w-full md:w-1/4">
                         <label htmlFor="equipped" className="block text-center">Equipped</label>
                         <input type="checkbox" id="equipped" {...register('equipped')}
                                className='checkbox-styles'/>
                     </div>
-                    <div className="w-1/4">
+                    <div className="w-full md:w-1/4">
                         <label htmlFor="sentMessage" className="block text-center">Sent Message?</label>
                         <input type="checkbox" id="sentMessage" {...register('sentMessage')}
                                className='checkbox-styles'/>
                     </div>
-                    <div className="w-1/4">
+                    <div className="w-full md:w-1/4">
                         <label htmlFor="hasAnswer" className="block text-center">Has Answer?</label>
                         <input type="checkbox" id="hasAnswer" {...register('hasAnswer')}
                                className='checkbox-styles'/>
                     </div>
                 </div>
+
                 <div className="flex justify-center">
                     <div className="w-full">
                         <label htmlFor="note" className="block text-center">Note</label>

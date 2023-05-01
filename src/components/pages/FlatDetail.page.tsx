@@ -27,11 +27,11 @@ export const FlatDetailPage = () => {
 
     if (id)
         return (
-            <div className='w-3/5 mx-auto'>
-                <div className='h-hFlatDetail relative relative'>
+            <div className='w-full md:w-4/5 xl:w-3/5 mx-auto'>
+                <div className='h-96 md:h-hFlatDetail relative relative mx-4'>
                     <img src={flat.photo} alt="flat-image"
                          className='w-full h-full object-cover rounded-3xl'/>
-                    <div className='absolute top-6 right-6' title='Edit flat'>
+                    <div className='absolute top-6 right-6 flex gap-4 md:block' title='Edit flat'>
                         <button
                             onClick={() => toggleFlatData('favourite', flat, () => setReload(!reload))}
                             className='block text-6xl hover:scale-110 transform transition-all mb-6'>
@@ -49,26 +49,23 @@ export const FlatDetailPage = () => {
                             }
                         </button>
                     </div>
-                    <div className="absolute bottom-6 flex items-end justify-between px-8 w-full gap-8">
-                        <div
-                            className='flex items-end justify-between gap-4 text-gray-100 text-5xl w-1/4'>
-                            <div className='flex items-center gap-4'>
-                                <TbDiamond className='drop-shadow-lg'/>
-                                <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
-                            </div>
+                    <div className='text-gray-100 text-5xl absolute bottom-6 left-6'>
+                        <div className='gap-4 flex items-center'>
+                            <TbDiamond className='drop-shadow-lg'/>
+                            <p className='text-3xl font-bold drop-shadow-lg'>{flat.prettyScore} / 10</p>
                         </div>
-                        <div title='Add feature' className='w-1/2'>
-                            <FlatContextProvider flat={flat}>
-                                <EditFlatFeaturesModal onOpenChange={() => setReload(!reload)}/>
-                            </FlatContextProvider>
-                        </div>
-                        <div title='Edit flat' onClick={() => setIsEditFormPrepared(true)}
-                             className='w-1/4 flex justify-end'>
-                            <FlatContextProvider flat={flat}>
-                                <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)}
-                                               isFormPrepared={isEditFormPrepared}/>
-                            </FlatContextProvider>
-                        </div>
+                    </div>
+                    <div title='Edit flat' onClick={() => setIsEditFormPrepared(true)}
+                         className='absolute bottom-6 right-6'>
+                        <FlatContextProvider flat={flat}>
+                            <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)}
+                                           isFormPrepared={isEditFormPrepared}/>
+                        </FlatContextProvider>
+                    </div>
+                    <div title='Add feature' className='absolute bottom-24 md:bottom-6 w-full flex justify-center'>
+                        <FlatContextProvider flat={flat}>
+                            <EditFlatFeaturesModal onOpenChange={() => setReload(!reload)}/>
+                        </FlatContextProvider>
                     </div>
                 </div>
                 <FlatDescription flat={flat}/>

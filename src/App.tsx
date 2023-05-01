@@ -7,7 +7,7 @@ export const App = () => {
     return (
         <Router>
             <Navigation/>
-            <div className="p-24">
+            <div className="py-24">
                 <Routes>
                     <Route path={'/'} element={<HomePage/>}/>
                     <Route path={'/history'} element={<HomePage/>}/>

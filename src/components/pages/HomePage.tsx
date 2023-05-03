@@ -16,7 +16,7 @@ export const HomePage = () => {
         getAllFlatsAPI().then(flats => setFlats(flats))
     }, [reload, isFormPrepared])
 
-    if (useLocation().pathname === '/history') {
+    if (useLocation().pathname === '/history' && flats.length > 0) {
         return (
             <>
                 <div className="main-container">
@@ -26,7 +26,7 @@ export const HomePage = () => {
                 </div>
             </>
         )
-    } else {
+    } else if (useLocation().pathname === '/' && flats.length > 0) {
         return (
             <>
                 <div className="main-container">
@@ -45,5 +45,7 @@ export const HomePage = () => {
                 </div>
             </>
         )
+    } else {
+        return <h1 className='text-center'>Loading...</h1>
     }
 }

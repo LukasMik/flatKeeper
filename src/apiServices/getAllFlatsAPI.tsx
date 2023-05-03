@@ -1,9 +1,8 @@
 import axios from "axios";
 import {IFlat} from "../types.ts";
-import {LOCAL_IPV4} from "../constants/general.ts";
 
 export const getAllFlatsAPI = (): Promise<IFlat[] | never[]> => {
-    return axios.get<IFlat[]>(`http://${LOCAL_IPV4}:3000/flats`)
+    return axios.get<IFlat[]>(`https://flatkeeper-api.onrender.com/flats`)
         .then(res => {
             return res.data
         })

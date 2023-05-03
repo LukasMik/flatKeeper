@@ -1,6 +1,6 @@
 import {IFlatSort, IFlatWithScore, SortBy, SortDirection} from "../types.ts";
 
-export const LOCAL_IPV4: string = '192.168.100.22'
+export const LOCAL_IPV4: string = '127.0.0.1'
 
 const sortByDirection = (flats: IFlatWithScore[], direction: SortDirection): IFlatWithScore[] => {
     if (direction === SortDirection.DESC) {

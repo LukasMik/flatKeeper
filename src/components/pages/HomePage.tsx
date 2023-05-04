@@ -46,6 +46,11 @@ export const HomePage = () => {
             </>
         )
     } else {
-        return <h1 className='text-center'>Loading...</h1>
+        return (
+            <>
+                <h1 className='text-center mt-12'>Loading...</h1>
+                <p className='text-center mt-8'>Can take a few minutes</p>
+            </>
+        )
     }
 }

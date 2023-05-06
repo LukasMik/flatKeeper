@@ -23,7 +23,9 @@ export const FlatDetailPage = () => {
     }, [id, reload, isEditFormPrepared])
 
     if (!flat)
-        return null
+        return (
+            <h1 className="text-center">Loading...</h1>
+        )
 
     if (id)
         return (
@@ -56,7 +58,7 @@ export const FlatDetailPage = () => {
                         </div>
                     </div>
                     <div title='Edit flat' onClick={() => setIsEditFormPrepared(true)}
-                         className='absolute bottom-6 right-6'>
+                         className='absolute bottom-6 right-6 z-10'>
                         <FlatContextProvider flat={flat}>
                             <EditFlatModal status='edit' onOpenChange={() => setIsEditFormPrepared(false)}
                                            isFormPrepared={isEditFormPrepared}/>

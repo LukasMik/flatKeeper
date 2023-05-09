@@ -2,7 +2,9 @@ import axios from "axios";
 import {IFlat} from "../types.ts";
 
 export const getFlatByIdAPI = async (id: string | number): Promise<IFlat | null> => {
-    return await axios.get<IFlat>(`https://flatkeeper-api.onrender.com/flats/${id}`)
+    return await axios.get<IFlat>(`https://flatkeeper-api.onrender.com/flats/${id}`, {
+        headers: {"Access-Control-Allow-Origin": "*",}
+    })
         .then(res => {
             return res.data
         })

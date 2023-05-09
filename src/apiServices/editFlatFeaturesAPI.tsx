@@ -18,7 +18,9 @@ export const editFlatFeaturesAPI = async (
     }
 
     try {
-        await axios.put(`https://flatkeeper-api.onrender.com/flats/${flat.id}`, updatedData());
+        await axios.put(`https://flatkeeper-api.onrender.com/flats/${flat.id}`, updatedData(), {
+            headers: {"Access-Control-Allow-Origin": "*",}
+        });
         onSuccess();
     } catch (error) {
         console.error(error);
